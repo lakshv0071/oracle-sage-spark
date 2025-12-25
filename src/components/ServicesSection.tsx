@@ -1,42 +1,60 @@
 import { motion } from "framer-motion";
-import { Database, Cloud, Settings, Cpu, Shield, Zap } from "lucide-react";
+import { Database, Settings, Cpu, Shield, Headphones, Users, Briefcase, Globe, BarChart3 } from "lucide-react";
 
 const services = [
   {
     icon: Database,
-    title: "Oracle Ecosystem",
-    description: "End-to-end Oracle Database, Fusion Middleware, E-Business Suite & Cloud Applications management with 24/7 global support.",
-    features: ["Database Administration", "Performance Tuning", "RAC & Data Guard", "Exadata Management"]
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Transformation",
-    description: "Strategic cloud migrations to AWS, Azure, OCI with hybrid architecture design and cost optimization.",
-    features: ["Multi-Cloud Strategy", "Migration Planning", "FinOps & Optimization", "Cloud Security"]
+    title: "Oracle Managed Services",
+    description: "Complete Oracle ecosystem management from EBS to Cloud Infrastructure with 24/7 enterprise support.",
+    features: ["E-Business Suite (R12.1/R12.2)", "Database (11g–23ai, RAC, Data Guard)", "Middleware, BI & Analytics", "OCI & Migration", "Security & Compliance"]
   },
   {
     icon: Settings,
-    title: "DevOps & SRE",
-    description: "Accelerate delivery with CI/CD pipelines, infrastructure as code, and site reliability engineering practices.",
-    features: ["CI/CD Automation", "Kubernetes & Containers", "Observability Stack", "Incident Management"]
+    title: "DevOps Services",
+    description: "Modern DevOps practices with CI/CD automation, infrastructure as code, and multi-cloud expertise.",
+    features: ["CI/CD (Jenkins, GitHub Actions, GitLab)", "IaC (Terraform, Ansible, Pulumi)", "Cloud Architecture (AWS, Azure, GCP)", "Docker & Kubernetes"]
+  },
+  {
+    icon: BarChart3,
+    title: "SRE Services",
+    description: "Site Reliability Engineering with full observability, incident management, and chaos engineering.",
+    features: ["Prometheus, Grafana, ELK, Datadog", "PagerDuty & OpsGenie Integration", "SLAs, SLOs, Error Budgets", "Chaos Engineering"]
   },
   {
     icon: Cpu,
-    title: "AI-Enabled Services",
-    description: "Intelligent automation, predictive analytics, and AI-powered operations for smarter infrastructure.",
-    features: ["AIOps & MLOps", "Predictive Monitoring", "Intelligent Automation", "ChatOps Integration"]
+    title: "Automation & AI-Enabled",
+    description: "Intelligent automation with predictive alerting, custom scripting, and self-healing infrastructure.",
+    features: ["Automated Monitoring & Remediation", "Predictive Alerting", "Python & Bash Scripting", "Auto Backups & Scaling"]
+  },
+  {
+    icon: Headphones,
+    title: "Production Support",
+    description: "Round-the-clock L2/L3/L4 support with global delivery from India and US operations centers.",
+    features: ["24x7 L2/L3/L4 Support", "Global Delivery (India & US)", "Mission-Critical Systems", "Rapid Response SLAs"]
   },
   {
     icon: Shield,
-    title: "Enterprise Security",
-    description: "Comprehensive security operations, compliance management, and zero-trust architecture implementation.",
-    features: ["SOC Services", "Compliance & Audit", "Identity Management", "Threat Detection"]
+    title: "SAP Services",
+    description: "Comprehensive SAP Basis administration, upgrades, integrations, and production support.",
+    features: ["SAP Basis Administration", "System Upgrades", "Integration Services", "Production Support"]
   },
   {
-    icon: Zap,
-    title: "Managed Services",
-    description: "24/7 production support, proactive monitoring, and dedicated teams for mission-critical systems.",
-    features: ["24/7 NOC Support", "SLA Management", "Capacity Planning", "Disaster Recovery"]
+    icon: Globe,
+    title: "Website Development",
+    description: "Enterprise-grade web solutions including corporate websites, internal portals, and dashboards.",
+    features: ["Enterprise Websites", "Internal Portals", "Custom Dashboards", "Modern UI/UX"]
+  },
+  {
+    icon: Users,
+    title: "HR & Staffing Services",
+    description: "IT staffing and workforce scaling with specialized Oracle, SAP, and DevOps talent.",
+    features: ["IT Staffing Solutions", "Workforce Scaling", "Oracle & SAP Talent", "DevOps Engineers"]
+  },
+  {
+    icon: Briefcase,
+    title: "Business Consulting",
+    description: "Strategic consulting for revenue recovery, optimization, and technology-driven transformation.",
+    features: ["Revenue Recovery", "Process Optimization", "Digital Transformation", "Technology Strategy"]
   }
 ];
 
