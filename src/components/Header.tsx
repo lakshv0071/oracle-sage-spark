@@ -5,10 +5,10 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Services", href: "/services" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Industries", href: "#industries" },
-  { label: "About", href: "#about" },
-  { label: "Resources", href: "#resources" },
+  { label: "Solutions", href: "/solutions" },
+  { label: "Industries", href: "/industries" },
+  { label: "About", href: "/about" },
+  { label: "Resources", href: "/resources" },
 ];
 
 const Header = () => {
@@ -44,11 +44,11 @@ const Header = () => {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              Client Portal
+            <Button variant="ghost" size="sm" asChild>
+              <a href="/client-portal">Client Portal</a>
             </Button>
-            <Button variant="default" size="sm">
-              Get Started
+            <Button variant="default" size="sm" asChild>
+              <a href="/get-started">Get Started</a>
             </Button>
           </div>
 
