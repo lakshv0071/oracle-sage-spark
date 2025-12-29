@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ArrowRight, Shield, Cpu, Clock } from "lucide-react";
+import ScheduleModal from "./ScheduleModal";
+import CaseStudiesModal from "./CaseStudiesModal";
 
 const HeroSection = () => {
+  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
+  const [isCaseStudiesOpen, setIsCaseStudiesOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background layers */}
@@ -59,11 +64,11 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <Button variant="hero" size="xl">
+            <Button variant="hero" size="xl" onClick={() => setIsScheduleOpen(true)}>
               Schedule Assessment
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button variant="heroOutline" size="xl">
+            <Button variant="heroOutline" size="xl" onClick={() => setIsCaseStudiesOpen(true)}>
               View Case Studies
             </Button>
           </motion.div>
@@ -93,6 +98,17 @@ const HeroSection = () => {
       
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+
+      {/* Modals */}
+      <ScheduleModal
+        isOpen={isScheduleOpen}
+        onClose={() => setIsScheduleOpen(false)}
+        type="assessment"
+      />
+      <CaseStudiesModal
+        isOpen={isCaseStudiesOpen}
+        onClose={() => setIsCaseStudiesOpen(false)}
+      />
     </section>
   );
 };

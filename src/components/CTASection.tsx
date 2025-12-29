@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ArrowRight, Phone, Mail } from "lucide-react";
+import ScheduleModal from "./ScheduleModal";
+import CapabilitiesDeck from "./CapabilitiesDeck";
 
 const CTASection = () => {
+  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
+  const [isDeckOpen, setIsDeckOpen] = useState(false);
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Background glow */}
@@ -32,11 +37,11 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button variant="hero" size="xl">
+            <Button variant="hero" size="xl" onClick={() => setIsScheduleOpen(true)}>
               Schedule a Consultation
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button variant="heroOutline" size="xl">
+            <Button variant="heroOutline" size="xl" onClick={() => setIsDeckOpen(true)}>
               Download Capabilities Deck
             </Button>
           </div>
@@ -53,6 +58,17 @@ const CTASection = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Modals */}
+      <ScheduleModal
+        isOpen={isScheduleOpen}
+        onClose={() => setIsScheduleOpen(false)}
+        type="consultation"
+      />
+      <CapabilitiesDeck
+        isOpen={isDeckOpen}
+        onClose={() => setIsDeckOpen(false)}
+      />
     </section>
   );
 };
