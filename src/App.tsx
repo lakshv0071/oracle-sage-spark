@@ -5,6 +5,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
+import OracleManagedServices from "./pages/services/OracleManagedServices";
+import CloudTransformation from "./pages/services/CloudTransformation";
+import DevOpsSRE from "./pages/services/DevOpsSRE";
+import AIEnabledOperations from "./pages/services/AIEnabledOperations";
+import ProductionSupport from "./pages/services/ProductionSupport";
 import Solutions from "./pages/Solutions";
 import Industries from "./pages/Industries";
 import About from "./pages/About";
@@ -24,6 +29,11 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/oracle-managed-services" element={<OracleManagedServices />} />
+          <Route path="/services/cloud-transformation" element={<CloudTransformation />} />
+          <Route path="/services/devops-sre" element={<DevOpsSRE />} />
+          <Route path="/services/ai-enabled-operations" element={<AIEnabledOperations />} />
+          <Route path="/services/production-support" element={<ProductionSupport />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/about" element={<About />} />
