@@ -4,6 +4,12 @@ import { Database, Settings, Cpu, Shield, Headphones, Users, Briefcase, Globe, B
 const services = [
   {
     icon: Database,
+    title: "PostgreSQL Services",
+    description: "Enterprise PostgreSQL database management with high availability, performance tuning, and 24/7 expert support.",
+    features: ["PostgreSQL Administration", "High Availability & Replication", "Performance Optimization", "Backup & Recovery", "Migration Services"]
+  },
+  {
+    icon: Database,
     title: "Oracle Managed Services",
     description: "Complete Oracle ecosystem management from EBS to Cloud Infrastructure with 24/7 enterprise support.",
     features: ["E-Business Suite (R12.1/R12.2)", "Database (11g–23ai, RAC, Data Guard)", "Middleware, BI & Analytics", "OCI & Migration", "Security & Compliance"]
