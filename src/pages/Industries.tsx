@@ -25,8 +25,8 @@ const industries = [
       "SOC-compliant managed services",
       "High-availability disaster recovery"
     ],
-    stats: { clients: "50+", uptime: "99.99%", compliance: "100%" },
-    clients: ["Regional Banks", "Insurance Providers", "Investment Firms", "Credit Unions"]
+    stats: { projects: "50+", uptime: "99.99%", compliance: "100%" },
+    sectors: ["Regional Banks", "Insurance Providers", "Investment Firms", "Credit Unions"]
   },
   {
     id: "healthcare",
@@ -45,8 +45,8 @@ const industries = [
       "Healthcare analytics and BI",
       "Secure data exchange platforms"
     ],
-    stats: { clients: "30+", hipaaAudits: "Zero findings", dataProtected: "10M+ records" },
-    clients: ["Hospital Systems", "Pharma Companies", "Medical Device Manufacturers", "Clinical Labs"]
+    stats: { projects: "30+", hipaaAudits: "Zero findings", dataProtected: "10M+ records" },
+    sectors: ["Hospital Systems", "Pharma Companies", "Medical Device Manufacturers", "Clinical Labs"]
   },
   {
     id: "manufacturing",
@@ -65,8 +65,8 @@ const industries = [
       "IoT and edge computing",
       "Supply chain analytics"
     ],
-    stats: { efficiency: "40% improvement", downtime: "60% reduction", clients: "45+" },
-    clients: ["Automotive Suppliers", "Industrial Equipment", "Consumer Goods", "Aerospace"]
+    stats: { efficiency: "40% improvement", downtime: "60% reduction", projects: "45+" },
+    sectors: ["Automotive Suppliers", "Industrial Equipment", "Consumer Goods", "Aerospace"]
   },
   {
     id: "retail",
@@ -85,8 +85,8 @@ const industries = [
       "Customer data platforms",
       "Cloud-native e-commerce"
     ],
-    stats: { peakTraffic: "10x capacity", inventory: "99.5% accuracy", clients: "35+" },
-    clients: ["National Retailers", "E-commerce Platforms", "Grocery Chains", "Specialty Stores"]
+    stats: { peakTraffic: "10x capacity", inventory: "99.5% accuracy", projects: "35+" },
+    sectors: ["National Retailers", "E-commerce Platforms", "Grocery Chains", "Specialty Stores"]
   },
   {
     id: "logistics",
@@ -105,8 +105,8 @@ const industries = [
       "Real-time tracking platforms",
       "Route optimization"
     ],
-    stats: { deliveryImprovement: "25%", costReduction: "30%", clients: "40+" },
-    clients: ["3PL Providers", "Freight Carriers", "Parcel Shippers", "Cold Chain Logistics"]
+    stats: { deliveryImprovement: "25%", costReduction: "30%", projects: "40+" },
+    sectors: ["3PL Providers", "Freight Carriers", "Parcel Shippers", "Cold Chain Logistics"]
   },
   {
     id: "government",
@@ -125,8 +125,8 @@ const industries = [
       "Citizen-facing portals",
       "Data analytics platforms"
     ],
-    stats: { agencies: "25+", compliance: "FedRAMP Ready", savings: "35% avg" },
-    clients: ["Federal Agencies", "State Governments", "Municipal Authorities", "Defense Contractors"]
+    stats: { projects: "25+", compliance: "FedRAMP Ready", savings: "35% avg" },
+    sectors: ["Federal Agencies", "State Governments", "Municipal Authorities", "Defense Contractors"]
   },
   {
     id: "energy",
@@ -145,8 +145,8 @@ const industries = [
       "Predictive maintenance",
       "Oracle Utilities implementations"
     ],
-    stats: { uptime: "99.99%", assetLife: "+20% extended", clients: "20+" },
-    clients: ["Power Utilities", "Oil & Gas Companies", "Renewable Energy", "Pipeline Operators"]
+    stats: { uptime: "99.99%", assetLife: "+20% extended", projects: "20+" },
+    sectors: ["Power Utilities", "Oil & Gas Companies", "Renewable Energy", "Pipeline Operators"]
   },
   {
     id: "travel",
@@ -165,8 +165,8 @@ const industries = [
       "Revenue management optimization",
       "Cloud migration services"
     ],
-    stats: { bookingSpeed: "3x faster", guestSatisfaction: "+25%", clients: "15+" },
-    clients: ["Hotel Chains", "Airlines", "Cruise Lines", "Travel Agencies"]
+    stats: { bookingSpeed: "3x faster", guestSatisfaction: "+25%", projects: "15+" },
+    sectors: ["Hotel Chains", "Airlines", "Cruise Lines", "Travel Agencies"]
   },
   {
     id: "education",
@@ -185,8 +185,8 @@ const industries = [
       "Campus security solutions",
       "Research cloud computing"
     ],
-    stats: { institutions: "20+", students: "500K+ served", uptime: "99.9%" },
-    clients: ["Research Universities", "Community Colleges", "Online Learning Platforms", "K-12 Districts"]
+    stats: { projects: "20+", students: "500K+ served", uptime: "99.9%" },
+    sectors: ["Research Universities", "Community Colleges", "Online Learning Platforms", "K-12 Districts"]
   }
 ];
 
@@ -288,10 +288,10 @@ const Industries = () => {
                   </ul>
                 </div>
 
-                {/* Clients */}
+                {/* Sectors */}
                 <div className="pt-4 border-t border-border/50">
                   <p className="text-xs text-muted-foreground">
-                    <span className="font-medium">Clients include:</span> {industry.clients.join(", ")}
+                    <span className="font-medium">Sectors we serve:</span> {industry.sectors.join(", ")}
                   </p>
                 </div>
               </motion.div>

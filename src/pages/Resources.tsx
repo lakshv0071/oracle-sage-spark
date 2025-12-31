@@ -28,7 +28,7 @@ const featuredResources = [
     type: "Webinar",
     icon: Video,
     title: "DevOps Transformation: From Zero to Hero",
-    description: "Watch our CTO discuss how Fortune 500 companies have successfully implemented DevOps at scale.",
+    description: "Watch our CTO discuss how enterprises have successfully implemented DevOps at scale.",
     readTime: "60 min",
     tags: ["DevOps", "CI/CD", "Transformation"]
   }

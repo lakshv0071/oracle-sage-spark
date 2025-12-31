@@ -8,17 +8,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const stats = [
-  { value: "500+", label: "Enterprise Clients" },
-  { value: "15+", label: "Years Experience" },
+  { value: "20+", label: "Years Experience" },
   { value: "1000+", label: "Projects Delivered" },
-  { value: "99.9%", label: "Client Satisfaction" }
+  { value: "50+", label: "Expert Team Members" },
+  { value: "24/7", label: "Global Support" }
 ];
 
 const values = [
   {
     icon: Target,
-    title: "Client Success",
-    description: "Your success is our success. We measure ourselves by the outcomes we deliver for your business."
+    title: "Excellence",
+    description: "We strive for excellence in everything we do, delivering high-quality solutions that exceed expectations."
   },
   {
     icon: Zap,
@@ -37,27 +37,27 @@ const values = [
   }
 ];
 
-const certifications = [
-  { name: "Oracle Platinum Partner", category: "Enterprise Applications" },
-  { name: "SAP Gold Partner", category: "Enterprise Applications" },
-  { name: "AWS Advanced Consulting Partner", category: "Cloud" },
-  { name: "Microsoft Azure Expert MSP", category: "Cloud" },
-  { name: "Google Cloud Partner", category: "Cloud" },
-  { name: "ISO 27001 Certified", category: "Security" },
-  { name: "SOC 2 Type II Compliant", category: "Security" },
-  { name: "CMMI Level 5", category: "Quality" }
+const expertise = [
+  { name: "PostgreSQL & Oracle", category: "Database" },
+  { name: "AWS, Azure, GCP", category: "Cloud" },
+  { name: "DevOps & SRE", category: "Operations" },
+  { name: "AI & Automation", category: "Innovation" },
+  { name: "SAP & ERP", category: "Enterprise" },
+  { name: "Security & Compliance", category: "Security" },
+  { name: "24/7 Production Support", category: "Support" },
+  { name: "Enterprise Architecture", category: "Strategy" }
 ];
 
 const leadership = [
   {
     name: "Michael Chen",
     role: "Chief Executive Officer",
-    bio: "25+ years leading enterprise technology transformations. Former VP at Oracle and Accenture."
+    bio: "25+ years leading enterprise technology transformations with deep expertise in Oracle and cloud solutions."
   },
   {
     name: "Sarah Williams",
     role: "Chief Technology Officer",
-    bio: "Former AWS Principal Architect. Expert in cloud-native architectures and DevOps transformation."
+    bio: "Expert in cloud-native architectures and DevOps transformation with 20+ years in enterprise IT."
   },
   {
     name: "Rajesh Patel",
@@ -67,17 +67,17 @@ const leadership = [
   {
     name: "Jennifer Martinez",
     role: "Chief Revenue Officer",
-    bio: "Former Gartner analyst. Deep expertise in enterprise software and managed services markets."
+    bio: "Deep expertise in enterprise software and managed services markets with 15+ years experience."
   },
   {
     name: "David Kim",
     role: "VP, Oracle Practice",
-    bio: "Oracle ACE Director. 15+ years implementing Oracle EBS, Cloud, and Database solutions."
+    bio: "15+ years implementing Oracle EBS, Cloud, and Database solutions for enterprise organizations."
   },
   {
     name: "Lisa Thompson",
     role: "VP, Cloud & DevOps",
-    bio: "Kubernetes and cloud-native expert. Led 100+ cloud migration projects across Fortune 500."
+    bio: "Kubernetes and cloud-native expert. Led 100+ cloud migration projects across industries."
   }
 ];
 
@@ -91,13 +91,13 @@ const locations = [
 ];
 
 const timeline = [
-  { year: "2009", event: "Founded in San Francisco with focus on Oracle consulting" },
-  { year: "2012", event: "Achieved Oracle Platinum Partner status" },
-  { year: "2014", event: "Opened first delivery center in Bangalore, India" },
-  { year: "2016", event: "Expanded to SAP and cloud services" },
-  { year: "2018", event: "Launched DevOps and SRE practices" },
-  { year: "2020", event: "Achieved AWS Advanced Partner status" },
-  { year: "2022", event: "Expanded to 500+ enterprise clients" },
+  { year: "2004", event: "Founded with focus on Oracle consulting and database services" },
+  { year: "2008", event: "Expanded to include SAP and ERP services" },
+  { year: "2012", event: "Opened first delivery center in India" },
+  { year: "2016", event: "Launched cloud transformation and migration services" },
+  { year: "2018", event: "Added DevOps and SRE practices" },
+  { year: "2020", event: "Expanded PostgreSQL managed services" },
+  { year: "2022", event: "Grew team to 50+ enterprise experts" },
   { year: "2024", event: "Launched AI-enabled managed services" }
 ];
 
@@ -178,18 +178,18 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  ApexTech was founded in 2009 by a team of Oracle veterans who saw a gap in the market: 
+                  ApexTech was founded in 2004 by a team of database experts who saw a gap in the market: 
                   enterprises needed a partner who could deliver both deep technical expertise and genuine 
                   business understanding.
                 </p>
                 <p>
-                  Starting with Oracle E-Business Suite consulting, we quickly expanded to cover the full 
-                  enterprise technology stack. Today, we serve over 500 clients across 30+ countries, 
-                  from mid-market companies to Fortune 100 enterprises.
+                  Starting with Oracle and PostgreSQL consulting, we quickly expanded to cover the full 
+                  enterprise technology stack. Today, our team of 50+ experts serves organizations across 
+                  multiple industries and geographies.
                 </p>
                 <p>
                   Our secret? We hire the best talent, invest in continuous learning, and measure our 
-                  success by client outcomes—not billable hours. When you succeed, we succeed.
+                  success by project outcomes. When you succeed, we succeed.
                 </p>
               </div>
             </motion.div>
@@ -297,7 +297,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Certifications */}
+      {/* Expertise */}
       <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container">
           <motion.div 
@@ -307,10 +307,10 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Certifications & <span className="text-gradient-primary">Partnerships</span>
+              Our <span className="text-gradient-primary">Expertise</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Recognized by leading technology vendors for our expertise and delivery excellence.
+              Deep technical knowledge across the enterprise technology stack.
             </p>
           </motion.div>
 
@@ -321,15 +321,15 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {certifications.map((cert) => (
+            {expertise.map((item) => (
               <motion.div 
-                key={cert.name}
+                key={item.name}
                 variants={itemVariants}
                 className="glass-card rounded-xl p-4 text-center"
               >
                 <Award className="w-8 h-8 text-primary mx-auto mb-2" />
-                <p className="font-medium text-sm">{cert.name}</p>
-                <p className="text-xs text-muted-foreground">{cert.category}</p>
+                <p className="font-medium text-sm">{item.name}</p>
+                <p className="text-xs text-muted-foreground">{item.category}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -387,10 +387,10 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Partner <span className="text-gradient-primary">With Us?</span>
+              Ready to Work <span className="text-gradient-primary">With Us?</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Join 500+ enterprises who trust ApexTech for their mission-critical technology needs.
+              Let our team of experts help you with your mission-critical technology needs.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" className="gap-2">

@@ -55,7 +55,7 @@ Capabilities Deck 2024
 
 ABOUT US
 20+ Years of Enterprise Excellence
-Trusted by Fortune 500 Companies
+Industry-Leading Expertise
 24/7 Global Support
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
