@@ -40,7 +40,7 @@ const services = [
         details: "Row-level security, SSL/TLS encryption, audit logging, and regulatory compliance (SOX, HIPAA, PCI-DSS)."
       }
     ],
-    benefits: ["99.99% uptime SLA", "24/7 global support", "Certified PostgreSQL experts", "Cost optimization"],
+    benefits: ["99.99% uptime SLA", "24/7 global support", "Expert PostgreSQL team", "Cost optimization"],
     technologies: ["PostgreSQL", "Patroni", "pgBouncer", "Barman", "pgBackRest", "TimescaleDB", "PostGIS"]
   },
   {
@@ -48,7 +48,7 @@ const services = [
     icon: Database,
     title: "Oracle Managed Services",
     tagline: "Complete Oracle Ecosystem Management",
-    description: "End-to-end Oracle ecosystem management from E-Business Suite to Cloud Infrastructure with 24/7 enterprise support. Our certified Oracle experts deliver comprehensive database administration, performance optimization, and seamless cloud migrations.",
+    description: "End-to-end Oracle ecosystem management from E-Business Suite to Cloud Infrastructure with 24/7 enterprise support. Our experienced Oracle experts deliver comprehensive database administration, performance optimization, and seamless cloud migrations.",
     features: [
       {
         title: "E-Business Suite (R12.1/R12.2)",
@@ -75,7 +75,7 @@ const services = [
         details: "Database security assessments, TDE encryption, audit vault implementations, and regulatory compliance (SOX, HIPAA, PCI-DSS)."
       }
     ],
-    benefits: ["99.99% uptime SLA", "24/7 global support", "Certified Oracle experts", "Cost optimization"],
+    benefits: ["99.99% uptime SLA", "24/7 global support", "Expert Oracle team", "Cost optimization"],
     technologies: ["Oracle Database", "Oracle EBS", "OCI", "Exadata", "RAC", "Data Guard", "GoldenGate"]
   },
   {
@@ -223,7 +223,7 @@ const services = [
     icon: Shield,
     title: "SAP Services",
     tagline: "Comprehensive SAP Basis & Beyond",
-    description: "Full-spectrum SAP services including Basis administration, system upgrades, S/4HANA migrations, and production support. Our SAP-certified consultants deliver enterprise-grade SAP solutions.",
+    description: "Full-spectrum SAP services including Basis administration, system upgrades, S/4HANA migrations, and production support. Our experienced SAP consultants deliver enterprise-grade SAP solutions.",
     features: [
       {
         title: "SAP Basis Administration",
@@ -250,7 +250,7 @@ const services = [
         details: "24x7 SAP application and Basis support with defined SLAs and dedicated support teams."
       }
     ],
-    benefits: ["SAP-certified experts", "S/4HANA migration specialists", "End-to-end lifecycle support", "Cost optimization"],
+    benefits: ["Expert SAP team", "S/4HANA migration specialists", "End-to-end lifecycle support", "Cost optimization"],
     technologies: ["SAP ECC", "S/4HANA", "SAP HANA", "SAP PI/PO", "SAP BW", "SAP Fiori", "Solution Manager"]
   },
   {
@@ -305,7 +305,7 @@ const services = [
       },
       {
         title: "Oracle Talent",
-        details: "Certified Oracle DBAs, EBS developers, Cloud architects, and Fusion Middleware specialists."
+        details: "Experienced Oracle DBAs, EBS developers, Cloud architects, and Fusion Middleware specialists."
       },
       {
         title: "SAP Talent",

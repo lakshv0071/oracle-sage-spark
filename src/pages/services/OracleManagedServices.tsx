@@ -23,7 +23,7 @@ const features = [
   {
     icon: Users,
     title: "Dedicated Team",
-    description: "Access to certified Oracle DBAs and architects dedicated to your environment's success.",
+    description: "Access to experienced Oracle DBAs and architects dedicated to your environment's success.",
   },
 ];
 
@@ -53,13 +53,13 @@ const OracleManagedServices = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
               <Database className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Oracle Platinum Partner</span>
+              <span className="text-sm font-medium text-primary">Enterprise Oracle Expertise</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Oracle <span className="text-gradient-primary">Managed Services</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Enterprise-grade Oracle database management and support from certified experts. 
+              Enterprise-grade Oracle database management and support from experienced experts. 
               Focus on your business while we handle the complexity.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -87,7 +87,7 @@ const OracleManagedServices = () => {
               Comprehensive Oracle Expertise
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our certified Oracle specialists deliver end-to-end database management services.
+              Our experienced Oracle specialists deliver end-to-end database management services.
             </p>
           </motion.div>
 

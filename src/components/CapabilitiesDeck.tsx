@@ -21,10 +21,10 @@ interface CapabilitiesDeckProps {
 const deckContents = [
   "Company Overview & History",
   "Service Portfolio Details",
-  "Technology Partnerships",
+  "Technical Expertise",
   "Case Studies & Success Metrics",
   "Engagement Models & Pricing",
-  "Certifications & Compliance",
+  "Security & Compliance",
   "Global Delivery Centers",
   "Client Testimonials",
 ];
@@ -55,12 +55,13 @@ Capabilities Deck 2024
 
 ABOUT US
 20+ Years of Enterprise Excellence
-Fortune 500 Trusted Partner
-99.99% Uptime SLA Guaranteed
+Trusted by Fortune 500 Companies
+24/7 Global Support
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 OUR SERVICES
+• PostgreSQL Services - Enterprise DB Management
 • Oracle Managed Services - $50-60/hr
 • DevOps Services - Custom pricing
 • SRE Services - 24/7 support
@@ -73,13 +74,13 @@ OUR SERVICES
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-CERTIFICATIONS
-✓ Oracle Platinum Partner
-✓ SAP Gold Partner
-✓ AWS Advanced Partner
-✓ Microsoft Gold Partner
-✓ SOC 2 Type II Certified
-✓ ISO 27001 Certified
+WHY CHOOSE US
+✓ 20+ Years Enterprise Experience
+✓ 24/7 Global Support Teams
+✓ Dedicated Expert Teams
+✓ Flexible Engagement Models
+✓ Enterprise Security Standards
+✓ Proven Track Record
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
