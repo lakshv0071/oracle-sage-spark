@@ -209,7 +209,7 @@ const Solutions = () => {
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Proven solutions that transform operations, accelerate growth, and deliver measurable business outcomes.
-              Trusted by Fortune 500 companies worldwide.
+              Built on 20+ years of enterprise expertise.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" className="gap-2">

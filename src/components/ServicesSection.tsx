@@ -103,8 +103,8 @@ const ServicesSection = () => {
             Enterprise-Grade <span className="text-gradient-primary">Services</span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto">
-            Comprehensive managed services designed for Fortune 500 enterprises. 
-            From Oracle to Cloud to AI-driven operations.
+            Comprehensive managed services designed for modern enterprises. 
+            From PostgreSQL & Oracle to Cloud to AI-driven operations.
           </p>
         </motion.div>
 

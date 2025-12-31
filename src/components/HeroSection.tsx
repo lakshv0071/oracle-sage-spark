@@ -52,8 +52,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            20+ years delivering enterprise-grade Oracle, DevOps, SRE, and AI-enabled managed services 
-            to Fortune 500 organizations worldwide. Your uptime is our reputation.
+            20+ years delivering enterprise-grade PostgreSQL, Oracle, DevOps, SRE, and AI-enabled managed services. 
+            Your uptime is our reputation.
           </motion.p>
           
           {/* CTAs */}
