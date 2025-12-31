@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
+import { Database, Cloud, Server, Shield, Clock, Users } from "lucide-react";
 
-const logos = [
-  { name: "Oracle Partner", initials: "ORACLE" },
-  { name: "AWS Partner", initials: "AWS" },
-  { name: "Azure Partner", initials: "AZURE" },
-  { name: "Google Cloud", initials: "GCP" },
-  { name: "Red Hat", initials: "REDHAT" },
-  { name: "VMware", initials: "VMWARE" },
+const expertise = [
+  { icon: Database, label: "PostgreSQL & Oracle" },
+  { icon: Cloud, label: "Cloud Infrastructure" },
+  { icon: Server, label: "DevOps & SRE" },
+  { icon: Shield, label: "Enterprise Security" },
+  { icon: Clock, label: "24/7 Support" },
+  { icon: Users, label: "Dedicated Teams" },
 ];
 
 const TrustSection = () => {
@@ -21,7 +22,7 @@ const TrustSection = () => {
           className="text-center mb-10"
         >
           <p className="text-muted-foreground text-sm uppercase tracking-wider font-medium">
-            Trusted Technology Partners
+            Our Core Expertise
           </p>
         </motion.div>
         
@@ -35,16 +36,17 @@ const TrustSection = () => {
             visible: { transition: { staggerChildren: 0.1 } }
           }}
         >
-          {logos.map((logo) => (
+          {expertise.map((item) => (
             <motion.div
-              key={logo.name}
-              className="text-muted-foreground/50 hover:text-primary transition-colors duration-300 font-bold text-xl md:text-2xl tracking-wider"
+              key={item.label}
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300"
               variants={{
                 hidden: { opacity: 0, y: 10 },
                 visible: { opacity: 1, y: 0 }
               }}
             >
-              {logo.initials}
+              <item.icon className="w-5 h-5" />
+              <span className="font-medium text-sm md:text-base">{item.label}</span>
             </motion.div>
           ))}
         </motion.div>

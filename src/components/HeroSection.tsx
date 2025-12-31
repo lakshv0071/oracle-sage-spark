@@ -81,15 +81,15 @@ const HeroSection = () => {
           >
             <div className="flex items-center gap-2 text-muted-foreground">
               <Shield className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">SOC 2 Type II Certified</span>
+              <span className="text-sm font-medium">Enterprise Security</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Cpu className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">Oracle Platinum Partner</span>
+              <span className="text-sm font-medium">20+ Years Experience</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Clock className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">99.99% Uptime SLA</span>
+              <span className="text-sm font-medium">24/7 Global Support</span>
             </div>
           </motion.div>
         </div>
