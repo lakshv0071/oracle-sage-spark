@@ -9,6 +9,41 @@ import Footer from "@/components/Footer";
 
 const services = [
   {
+    id: "postgresql",
+    icon: Database,
+    title: "PostgreSQL Services",
+    tagline: "Enterprise PostgreSQL Database Management",
+    description: "Comprehensive PostgreSQL database services with high availability, performance optimization, and 24/7 expert support. Our certified PostgreSQL experts deliver enterprise-grade database administration, replication, and cloud migrations.",
+    features: [
+      {
+        title: "PostgreSQL Administration",
+        details: "Full lifecycle management including installation, configuration, patching, upgrades, and ongoing maintenance for all PostgreSQL versions."
+      },
+      {
+        title: "High Availability & Replication",
+        details: "Streaming replication, logical replication, Patroni clusters, and pgBouncer connection pooling for maximum uptime."
+      },
+      {
+        title: "Performance Optimization",
+        details: "Query optimization, indexing strategies, vacuum tuning, and pg_stat analysis for peak database performance."
+      },
+      {
+        title: "Backup & Recovery",
+        details: "pg_dump, pg_basebackup, Barman, and pgBackRest implementations with point-in-time recovery capabilities."
+      },
+      {
+        title: "Cloud PostgreSQL",
+        details: "AWS RDS, Azure Database, Google Cloud SQL, and managed PostgreSQL deployment and migration services."
+      },
+      {
+        title: "Security & Compliance",
+        details: "Row-level security, SSL/TLS encryption, audit logging, and regulatory compliance (SOX, HIPAA, PCI-DSS)."
+      }
+    ],
+    benefits: ["99.99% uptime SLA", "24/7 global support", "Certified PostgreSQL experts", "Cost optimization"],
+    technologies: ["PostgreSQL", "Patroni", "pgBouncer", "Barman", "pgBackRest", "TimescaleDB", "PostGIS"]
+  },
+  {
     id: "oracle",
     icon: Database,
     title: "Oracle Managed Services",

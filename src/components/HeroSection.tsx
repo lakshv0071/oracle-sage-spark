@@ -40,10 +40,9 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Mission-Critical{" "}
-            <span className="text-gradient-primary">Oracle</span> & Cloud
+            <span className="text-gradient-primary">AI-Powered</span> Managed
             <br />
-            <span className="text-muted-foreground">Expertise at Scale</span>
+            <span className="text-muted-foreground">Services at Scale</span>
           </motion.h1>
           
           {/* Subheadline */}
