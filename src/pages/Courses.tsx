@@ -1,9 +1,10 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Database, Cloud, Code, Bot, Clock, Users, Award, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import CourseDetailModal from "@/components/CourseDetailModal";
 const courseCategories = [
   {
     icon: Database,
@@ -184,6 +185,14 @@ const courseCategories = [
 ];
 
 const Courses = () => {
+  const [selectedCourse, setSelectedCourse] = useState<{
+    name: string;
+    duration: string;
+    level: string;
+    topics: string[];
+    category: string;
+  } | null>(null);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -278,7 +287,11 @@ const Courses = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="outline" className="w-full">
+                  <Button 
+                    variant="outline" 
+                    className="w-full"
+                    onClick={() => setSelectedCourse({ ...course, category: category.title })}
+                  >
                     Learn More
                   </Button>
                 </motion.div>
@@ -307,6 +320,12 @@ const Courses = () => {
       </section>
 
       <Footer />
+
+      <CourseDetailModal 
+        isOpen={!!selectedCourse} 
+        onClose={() => setSelectedCourse(null)} 
+        course={selectedCourse} 
+      />
     </div>
   );
 };
