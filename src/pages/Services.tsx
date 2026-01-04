@@ -613,7 +613,7 @@ const Services = () => {
               Our Difference
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose <span className="text-gradient-primary">ApexTech</span>
+              Why Choose <span className="text-gradient-primary">Paramanu Consulting</span>
             </h2>
           </motion.div>
 

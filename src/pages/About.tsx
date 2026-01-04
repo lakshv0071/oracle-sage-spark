@@ -178,7 +178,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  ApexTech was founded in 2004 by a team of database experts who saw a gap in the market: 
+                  Paramanu Consulting was founded in 2004 by a team of database experts who saw a gap in the market: 
                   enterprises needed a partner who could deliver both deep technical expertise and genuine 
                   business understanding.
                 </p>
