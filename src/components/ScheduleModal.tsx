@@ -18,8 +18,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { Calendar, Clock, CheckCircle2, Building2, User, Mail, Phone, Briefcase } from "lucide-react";
+import { Calendar, Clock, CheckCircle2, Building2, User, Mail, Phone, Briefcase, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { sendInquiryEmail } from "@/lib/emailjs";
 
 interface ScheduleModalProps {
   isOpen: boolean;
@@ -51,6 +52,7 @@ const timeSlots = [
 
 const ScheduleModal = ({ isOpen, onClose, type }: ScheduleModalProps) => {
   const [step, setStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -67,25 +69,46 @@ const ScheduleModal = ({ isOpen, onClose, type }: ScheduleModalProps) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = () => {
-    toast.success(
-      type === "assessment"
-        ? "Assessment scheduled! We'll contact you within 24 hours."
-        : "Consultation booked! Check your email for confirmation."
-    );
-    setStep(1);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      jobTitle: "",
-      service: "",
-      date: "",
-      time: "",
-      message: "",
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    
+    const success = await sendInquiryEmail({
+      type: type === "assessment" ? "Schedule Assessment" : "Schedule Consultation",
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      jobTitle: formData.jobTitle,
+      service: formData.service,
+      date: formData.date,
+      time: formData.time,
+      message: formData.message,
     });
-    onClose();
+
+    setIsSubmitting(false);
+
+    if (success) {
+      toast.success(
+        type === "assessment"
+          ? "Assessment scheduled! We'll contact you within 24 hours."
+          : "Consultation booked! Check your email for confirmation."
+      );
+      setStep(1);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        jobTitle: "",
+        service: "",
+        date: "",
+        time: "",
+        message: "",
+      });
+      onClose();
+    } else {
+      toast.error("Failed to send request. Please try again.");
+    }
   };
 
   const canProceedStep1 = formData.name && formData.email && formData.company;
@@ -325,8 +348,15 @@ const ScheduleModal = ({ isOpen, onClose, type }: ScheduleModalProps) => {
                 <Button variant="outline" onClick={() => setStep(2)}>
                   Back
                 </Button>
-                <Button onClick={handleSubmit} variant="hero">
-                  {type === "assessment" ? "Schedule Assessment" : "Book Consultation"}
+                <Button onClick={handleSubmit} variant="hero" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    type === "assessment" ? "Schedule Assessment" : "Book Consultation"
+                  )}
                 </Button>
               </div>
             </motion.div>
