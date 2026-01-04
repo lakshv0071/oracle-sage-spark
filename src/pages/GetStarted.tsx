@@ -2,11 +2,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   ArrowRight, CheckCircle2, Building2, User, Mail, Phone,
-  MessageSquare, Briefcase, Clock, Shield, Zap, Users
+  MessageSquare, Briefcase, Clock, Shield, Zap, Users, Loader2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { sendInquiryEmail } from "@/lib/emailjs";
+import { toast } from "sonner";
 
 const serviceInterests = [
   "Oracle Managed Services",
@@ -59,6 +61,7 @@ const benefits = [
 ];
 
 const GetStarted = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -81,10 +84,42 @@ const GetStarted = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission
+    setIsSubmitting(true);
+
+    const success = await sendInquiryEmail({
+      type: "Get Started Form",
+      name: `${formData.firstName} ${formData.lastName}`,
+      email: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      jobTitle: formData.jobTitle,
+      companySize: formData.companySize,
+      services: formData.services,
+      timeline: formData.timeline,
+      message: formData.message,
+    });
+
+    setIsSubmitting(false);
+
+    if (success) {
+      toast.success("Request submitted! We'll contact you within 24 hours.");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        company: "",
+        jobTitle: "",
+        companySize: "",
+        services: [],
+        timeline: "",
+        message: ""
+      });
+    } else {
+      toast.error("Failed to send request. Please try again.");
+    }
   };
 
   return (
@@ -298,8 +333,17 @@ const GetStarted = () => {
                   </div>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full gap-2">
-                  Submit Request <ArrowRight className="w-4 h-4" />
+                <Button type="submit" size="lg" className="w-full gap-2" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Submit Request <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center mt-4">
