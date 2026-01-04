@@ -255,7 +255,7 @@ const ClientPortal = () => {
               </Button>
               <Button size="lg" variant="outline" className="gap-2">
                 <Mail className="w-4 h-4" />
-                Email: support@apextech.com
+                Email: support@paramanu.com
               </Button>
             </div>
           </motion.div>

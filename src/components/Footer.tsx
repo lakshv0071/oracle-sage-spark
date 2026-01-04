@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="text-2xl font-bold mb-4">
-              <span className="text-gradient-primary">Apex</span>
-              <span className="text-foreground">Tech</span>
+              <span className="text-gradient-primary">Paramanu</span>
+              <span className="text-foreground"> Consulting</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               Tier-1 Enterprise IT Consulting, Oracle Architecture, and AI-Enabled Managed Services for the Fortune 500.
@@ -68,7 +68,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© {currentYear} ApexTech Consulting. All rights reserved.</p>
+          <p>© {currentYear} Paramanu Consulting. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

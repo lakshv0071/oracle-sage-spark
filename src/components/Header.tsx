@@ -27,8 +27,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="/" className="text-2xl font-bold">
-            <span className="text-gradient-primary">Apex</span>
-            <span className="text-foreground">Tech</span>
+            <span className="text-gradient-primary">Paramanu</span>
+            <span className="text-foreground"> Consulting</span>
           </a>
 
           {/* Desktop Nav */}
