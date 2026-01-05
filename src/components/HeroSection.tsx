@@ -52,7 +52,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            20+ years delivering enterprise-grade PostgreSQL, Oracle, DevOps, SRE, and AI-enabled managed services. 
+            Expert team delivering enterprise-grade PostgreSQL, Oracle, DevOps, SRE, and AI-enabled managed services. 
             Your uptime is our reputation.
           </motion.p>
           
@@ -85,7 +85,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Cpu className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">20+ Years Experience</span>
+              <span className="text-sm font-medium">Expert Team</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Clock className="w-5 h-5 text-primary" />

@@ -8,9 +8,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const stats = [
-  { value: "20+", label: "Years Experience" },
-  { value: "1000+", label: "Projects Delivered" },
-  { value: "50+", label: "Expert Team Members" },
+  { value: "100+", label: "Years Combined Expertise" },
+  { value: "50+", label: "Projects Delivered" },
+  { value: "15+", label: "Expert Team Members" },
   { value: "24/7", label: "Global Support" }
 ];
 
@@ -52,32 +52,32 @@ const leadership = [
   {
     name: "Michael Chen",
     role: "Chief Executive Officer",
-    bio: "25+ years leading enterprise technology transformations with deep expertise in Oracle and cloud solutions."
+    bio: "Seasoned technology leader with deep expertise in Oracle and cloud solutions, driving enterprise transformations."
   },
   {
     name: "Sarah Williams",
     role: "Chief Technology Officer",
-    bio: "Expert in cloud-native architectures and DevOps transformation with 20+ years in enterprise IT."
+    bio: "Expert in cloud-native architectures and DevOps transformation with extensive enterprise IT background."
   },
   {
     name: "Rajesh Patel",
     role: "Chief Operations Officer",
-    bio: "20+ years in IT operations. Built and scaled global delivery centers across 3 continents."
+    bio: "Experienced in IT operations with a track record of building and scaling global delivery centers."
   },
   {
     name: "Jennifer Martinez",
     role: "Chief Revenue Officer",
-    bio: "Deep expertise in enterprise software and managed services markets with 15+ years experience."
+    bio: "Deep expertise in enterprise software and managed services markets with proven sales leadership."
   },
   {
     name: "David Kim",
     role: "VP, Oracle Practice",
-    bio: "15+ years implementing Oracle EBS, Cloud, and Database solutions for enterprise organizations."
+    bio: "Oracle specialist with extensive experience implementing EBS, Cloud, and Database solutions."
   },
   {
     name: "Lisa Thompson",
     role: "VP, Cloud & DevOps",
-    bio: "Kubernetes and cloud-native expert. Led 100+ cloud migration projects across industries."
+    bio: "Kubernetes and cloud-native expert with a strong portfolio of successful cloud migration projects."
   }
 ];
 
@@ -91,14 +91,10 @@ const locations = [
 ];
 
 const timeline = [
-  { year: "2004", event: "Founded with focus on Oracle consulting and database services" },
-  { year: "2008", event: "Expanded to include SAP and ERP services" },
-  { year: "2012", event: "Opened first delivery center in India" },
-  { year: "2016", event: "Launched cloud transformation and migration services" },
-  { year: "2018", event: "Added DevOps and SRE practices" },
-  { year: "2020", event: "Expanded PostgreSQL managed services" },
-  { year: "2022", event: "Grew team to 50+ enterprise experts" },
-  { year: "2024", event: "Launched AI-enabled managed services" }
+  { year: "Dec 2025", event: "Founded with focus on AI-enabled managed services and enterprise consulting" },
+  { year: "Q1 2026", event: "Launched Oracle and PostgreSQL managed services" },
+  { year: "Q2 2026", event: "Expanded DevOps and SRE practice offerings" },
+  { year: "2026", event: "Growing team of enterprise technology experts" }
 ];
 
 const containerVariants = {
@@ -139,7 +135,7 @@ const About = () => {
               Your Trusted <span className="text-gradient-primary">Technology Partner</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              For over 15 years, we've helped enterprises transform their technology operations. 
+              Founded by industry veterans, we bring decades of combined expertise to help enterprises transform their technology operations. 
               From Oracle and SAP to cloud and DevOps, we deliver excellence at scale.
             </p>
           </motion.div>
@@ -178,17 +174,16 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Paramanu Consulting was founded in 2004 by a team of database experts who saw a gap in the market: 
+                  Paramanu Consulting was founded in December 2025 by a team of enterprise technology veterans who saw a gap in the market: 
                   enterprises needed a partner who could deliver both deep technical expertise and genuine 
-                  business understanding.
+                  business understanding with AI-first approach.
                 </p>
                 <p>
-                  Starting with Oracle and PostgreSQL consulting, we quickly expanded to cover the full 
-                  enterprise technology stack. Today, our team of 50+ experts serves organizations across 
-                  multiple industries and geographies.
+                  Our founding team brings decades of combined experience in Oracle, PostgreSQL, cloud infrastructure, 
+                  and DevOps. We're building a company focused on delivering excellence from day one.
                 </p>
                 <p>
-                  Our secret? We hire the best talent, invest in continuous learning, and measure our 
+                  Our approach? We hire the best talent, invest in continuous learning, and measure our 
                   success by project outcomes. When you succeed, we succeed.
                 </p>
               </div>

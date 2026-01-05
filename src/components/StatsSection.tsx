@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "20+", label: "Years of Enterprise Experience" },
-  { value: "500+", label: "Projects Delivered" },
+  { value: "100+", label: "Years Combined Expertise" },
+  { value: "50+", label: "Projects Delivered" },
   { value: "99.99%", label: "Uptime SLA Guarantee" },
   { value: "24/7", label: "Global Support Coverage" },
 ];
