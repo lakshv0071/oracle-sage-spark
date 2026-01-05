@@ -8,9 +8,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const stats = [
-  { value: "100+", label: "Years Combined Expertise" },
-  { value: "50+", label: "Projects Delivered" },
   { value: "15+", label: "Expert Team Members" },
+  { value: "50+", label: "Projects Delivered" },
+  { value: "99.99%", label: "Uptime SLA" },
   { value: "24/7", label: "Global Support" }
 ];
 
