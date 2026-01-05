@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "20+", label: "Years of Enterprise Experience" },
-  { value: "500+", label: "Fortune 500 Clients Served" },
+  { value: "500+", label: "Projects Delivered" },
   { value: "99.99%", label: "Uptime SLA Guarantee" },
   { value: "24/7", label: "Global Support Coverage" },
 ];

@@ -401,7 +401,7 @@ const GetStarted = () => {
               <div className="glass-card rounded-2xl p-6">
                 <h3 className="text-lg font-bold mb-4">Trusted By</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  500+ enterprises across Fortune 500 and mid-market companies.
+                  500+ enterprises across various industries and mid-market companies.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 text-xs bg-secondary rounded-full">Financial Services</span>
