@@ -87,7 +87,7 @@ const CaseStudiesModal = ({ isOpen, onClose }: CaseStudiesModalProps) => {
             Client Success Stories
           </DialogTitle>
           <DialogDescription>
-            See how we've helped Fortune 500 companies transform their IT infrastructure
+            See how we've helped enterprises transform their IT infrastructure
           </DialogDescription>
         </DialogHeader>
 

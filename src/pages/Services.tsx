@@ -394,7 +394,7 @@ const engagementModels = [
 const whyChooseUs = [
   {
     title: "Enterprise-Focused",
-    description: "Built for Fortune 500 complexity. We understand enterprise requirements, compliance needs, and scale challenges."
+    description: "Built for enterprise complexity. We understand large-scale requirements, compliance needs, and global challenges."
   },
   {
     title: "Automation-First",
@@ -448,7 +448,7 @@ const Services = () => {
               Enterprise-Grade <span className="text-gradient-primary">Managed Services</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Comprehensive technology services designed for Fortune 500 enterprises. 
+              Comprehensive technology services designed for modern enterprises. 
               From Oracle and SAP to DevOps and AI-driven operations, we deliver excellence at scale.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

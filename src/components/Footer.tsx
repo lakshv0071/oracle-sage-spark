@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="text-foreground"> Consulting</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Tier-1 Enterprise IT Consulting, Oracle Architecture, and AI-Enabled Managed Services for the Fortune 500.
+              Tier-1 Enterprise IT Consulting, Oracle Architecture, and AI-Enabled Managed Services for Modern Enterprises.
             </p>
             <div className="flex items-center gap-3">
               <a href="#" className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all">
