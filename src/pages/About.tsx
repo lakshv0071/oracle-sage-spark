@@ -49,47 +49,6 @@ const expertise = [
   { name: "Enterprise Architecture", category: "Strategy" }
 ];
 
-const leadership = [
-  {
-    name: "Michael Chen",
-    role: "Chief Executive Officer",
-    bio: "Seasoned technology leader with deep expertise in Oracle and cloud solutions, driving enterprise transformations."
-  },
-  {
-    name: "Sarah Williams",
-    role: "Chief Technology Officer",
-    bio: "Expert in cloud-native architectures and DevOps transformation with extensive enterprise IT background."
-  },
-  {
-    name: "Rajesh Patel",
-    role: "Chief Operations Officer",
-    bio: "Experienced in IT operations with a track record of building and scaling global delivery centers."
-  },
-  {
-    name: "Jennifer Martinez",
-    role: "Chief Revenue Officer",
-    bio: "Deep expertise in enterprise software and managed services markets with proven sales leadership."
-  },
-  {
-    name: "David Kim",
-    role: "VP, Oracle Practice",
-    bio: "Oracle specialist with extensive experience implementing EBS, Cloud, and Database solutions."
-  },
-  {
-    name: "Lisa Thompson",
-    role: "VP, Cloud & DevOps",
-    bio: "Kubernetes and cloud-native expert with a strong portfolio of successful cloud migration projects."
-  }
-];
-
-const locations = [
-  { city: "San Francisco", country: "USA", type: "Headquarters" },
-  { city: "New York", country: "USA", type: "Regional Office" },
-  { city: "Dallas", country: "USA", type: "Regional Office" },
-  { city: "Bangalore", country: "India", type: "Delivery Center" },
-  { city: "Hyderabad", country: "India", type: "Delivery Center" },
-  { city: "Pune", country: "India", type: "Delivery Center" }
-];
 
 const timeline = [
   { year: "Dec 2025", event: "Founded with focus on AI-enabled managed services and enterprise consulting" },
@@ -306,49 +265,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership */}
-      <section className="py-20 md:py-28 bg-secondary/30">
-        <div className="container">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Leadership <span className="text-gradient-primary">Team</span>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Experienced executives who have led technology transformations at the world's largest enterprises.
-            </p>
-          </motion.div>
-
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {leadership.map((leader) => (
-              <motion.div 
-                key={leader.name}
-                variants={itemVariants}
-                className="glass-card rounded-2xl p-6"
-              >
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <Users className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-lg font-bold">{leader.name}</h3>
-                <p className="text-sm text-primary font-medium mb-2">{leader.role}</p>
-                <p className="text-sm text-muted-foreground">{leader.bio}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Expertise */}
       <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container">
           <motion.div 
@@ -387,46 +303,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Global Presence */}
-      <section className="py-20 md:py-28">
-        <div className="container">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Global <span className="text-gradient-primary">Presence</span>
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Offices and delivery centers strategically located to serve clients worldwide.
-            </p>
-          </motion.div>
-
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {locations.map((location) => (
-              <motion.div 
-                key={location.city}
-                variants={itemVariants}
-                className="flex items-center gap-4 p-4 rounded-xl border border-border/50"
-              >
-                <Globe className="w-10 h-10 text-primary" />
-                <div>
-                  <p className="font-bold">{location.city}</p>
-                  <p className="text-sm text-muted-foreground">{location.country} • {location.type}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-20 md:py-28 bg-primary/5">
