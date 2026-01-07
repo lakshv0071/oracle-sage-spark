@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { 
   Award, Users, Globe, Target, Heart, Zap,
-  CheckCircle2, ArrowRight, Building2, TrendingUp
+  CheckCircle2, ArrowRight, Building2, TrendingUp,
+  Laptop, MapPin, Clock, Briefcase
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -250,8 +251,63 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership */}
+      {/* Company Policies - Remote First */}
       <section className="py-20 md:py-28">
+        <div className="container">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Company <span className="text-gradient-primary">Policies</span>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              We believe in creating the best environment for our team to thrive.
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="glass-card rounded-2xl p-8 md:p-12 text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 text-primary mb-6">
+                <Laptop className="w-10 h-10" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">100% Remote-First Company</h3>
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                At Paramanu Consulting, we exclusively offer remote positions. We believe that talented professionals 
+                can deliver exceptional results from anywhere in the world. Our remote-first culture enables us to 
+                attract the best talent globally while providing our team members with the flexibility they deserve.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="flex flex-col items-center p-4">
+                  <MapPin className="w-8 h-8 text-primary mb-3" />
+                  <h4 className="font-semibold mb-1">Work From Anywhere</h4>
+                  <p className="text-sm text-muted-foreground">No office commute, work from your preferred location</p>
+                </div>
+                <div className="flex flex-col items-center p-4">
+                  <Clock className="w-8 h-8 text-primary mb-3" />
+                  <h4 className="font-semibold mb-1">Flexible Hours</h4>
+                  <p className="text-sm text-muted-foreground">We focus on results, not hours spent online</p>
+                </div>
+                <div className="flex flex-col items-center p-4">
+                  <Briefcase className="w-8 h-8 text-primary mb-3" />
+                  <h4 className="font-semibold mb-1">Global Opportunities</h4>
+                  <p className="text-sm text-muted-foreground">Access to opportunities regardless of your location</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container">
           <motion.div 
             className="text-center mb-16"
