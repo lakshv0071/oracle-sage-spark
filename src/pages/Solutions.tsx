@@ -6,6 +6,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const solutions = [
   {
@@ -187,8 +188,35 @@ const itemVariants = {
 };
 
 const Solutions = () => {
+  const solutionsSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Enterprise Technology Solutions',
+    description: 'Proven enterprise solutions for cloud transformation, application management, security, and DevOps.',
+    itemListElement: solutions.map((solution, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Service',
+        name: solution.title,
+        description: solution.description,
+        provider: {
+          '@type': 'Organization',
+          name: 'Paramanu Consulting',
+        },
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Enterprise Technology Solutions"
+        description="Proven enterprise solutions: cloud transformation, ERP management, infrastructure modernization, security & compliance, data analytics, DevOps, and disaster recovery."
+        keywords="enterprise solutions, cloud transformation, Oracle EBS management, SAP solutions, infrastructure modernization, Kubernetes, security compliance, SOX HIPAA PCI-DSS, data analytics, DevOps transformation, disaster recovery"
+        url="https://paramanu.com/solutions"
+        structuredData={solutionsSchema}
+      />
       <Header />
       
       {/* Hero Section */}

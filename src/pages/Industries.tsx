@@ -6,6 +6,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const industries = [
   {
@@ -207,8 +208,35 @@ const itemVariants = {
 };
 
 const Industries = () => {
+  const industriesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Industries We Serve',
+    description: 'Enterprise IT solutions for financial services, healthcare, manufacturing, retail, and more.',
+    itemListElement: industries.map((industry, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Service',
+        name: `${industry.title} IT Solutions`,
+        description: industry.description,
+        provider: {
+          '@type': 'Organization',
+          name: 'Paramanu Consulting',
+        },
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Industry Solutions - Financial, Healthcare, Manufacturing & More"
+        description="Specialized enterprise IT solutions for financial services, healthcare, manufacturing, retail, logistics, government, energy, travel, and education. Compliance expertise included."
+        keywords="financial services IT, healthcare IT solutions, HIPAA compliance, manufacturing ERP, retail technology, logistics IT, government IT services, FedRAMP, energy utilities IT, education technology"
+        url="https://paramanu.com/industries"
+        structuredData={industriesSchema}
+      />
       <Header />
       
       {/* Hero Section */}

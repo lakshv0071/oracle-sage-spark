@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Clock, Shield, Headphones, AlertTriangle, CheckCircle, ArrowRight } from "lucide-react";
 
@@ -57,8 +58,28 @@ const metrics = [
 ];
 
 const ProductionSupport = () => {
+  const supportSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: '24/7 Production Support',
+    description: 'Enterprise-grade 24/7 production support with 99.99% uptime SLA and expert engineers.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Paramanu Consulting',
+    },
+    serviceType: 'IT Support',
+    areaServed: 'Worldwide',
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="24/7 Production Support - Enterprise IT Support Services"
+        description="Enterprise 24/7 production support with 99.99% uptime SLA. L2/L3/L4 support, 15-minute response time, proactive monitoring, incident management, and dedicated support teams."
+        keywords="24/7 IT support, production support services, enterprise IT support, L2 L3 support, managed IT services, incident management, proactive monitoring, SLA support, dedicated support team, IT helpdesk"
+        url="https://paramanu.com/services/production-support"
+        structuredData={supportSchema}
+      />
       <Header />
       
       {/* Hero Section */}

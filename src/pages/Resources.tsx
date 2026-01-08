@@ -6,6 +6,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const featuredResources = [
   {
@@ -162,8 +163,35 @@ const itemVariants = {
 };
 
 const Resources = () => {
+  const resourcesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Paramanu Consulting Resources',
+    description: 'Whitepapers, case studies, webinars, and expert insights for enterprise IT.',
+    url: 'https://paramanu.com/resources',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: featuredResources.map((resource, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Article',
+          name: resource.title,
+          description: resource.description,
+        },
+      })),
+    },
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Resources - Whitepapers, Case Studies & Expert Insights"
+        description="Free enterprise IT resources: whitepapers on cloud migration, Oracle optimization guides, DevOps webinars, case studies, and industry best practices."
+        keywords="IT whitepapers, cloud migration guide, Oracle EBS optimization, DevOps webinars, enterprise case studies, IT best practices, technology resources, digital transformation guide"
+        url="https://paramanu.com/resources"
+        structuredData={resourcesSchema}
+      />
       <Header />
       
       {/* Hero Section */}

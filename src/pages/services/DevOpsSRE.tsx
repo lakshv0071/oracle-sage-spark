@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { GitBranch, Gauge, RefreshCw, Terminal, CheckCircle, ArrowRight } from "lucide-react";
 
@@ -44,8 +45,28 @@ const practices = [
 ];
 
 const DevOpsSRE = () => {
+  const devopsSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'DevOps & SRE Services',
+    description: 'Modern DevOps and Site Reliability Engineering services for enterprise systems.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Paramanu Consulting',
+    },
+    serviceType: 'DevOps Consulting',
+    areaServed: 'Worldwide',
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="DevOps & SRE Services - CI/CD, Kubernetes, Infrastructure as Code"
+        description="Enterprise DevOps and SRE consulting. CI/CD pipeline design, Kubernetes orchestration, Terraform IaC, GitOps, observability, and platform engineering for 10x faster deployments."
+        keywords="DevOps services, SRE consulting, CI/CD pipeline, Kubernetes consulting, Terraform, infrastructure as code, GitOps, platform engineering, observability, Prometheus, Grafana, Jenkins, GitHub Actions, site reliability engineering"
+        url="https://paramanu.com/services/devops-sre"
+        structuredData={devopsSchema}
+      />
       <Header />
       
       {/* Hero Section */}

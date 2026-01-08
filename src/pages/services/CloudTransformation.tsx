@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Cloud, Zap, TrendingUp, Lock, CheckCircle, ArrowRight } from "lucide-react";
 
@@ -51,8 +52,28 @@ const cloudServices = [
 ];
 
 const CloudTransformation = () => {
+  const cloudSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Cloud Transformation Services',
+    description: 'Strategic cloud migration and modernization services for AWS, Azure, GCP, and Oracle Cloud.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Paramanu Consulting',
+    },
+    serviceType: 'Cloud Migration',
+    areaServed: 'Worldwide',
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Cloud Transformation - AWS, Azure, GCP Migration Services"
+        description="Expert cloud migration and transformation services. Multi-cloud strategy for AWS, Azure, GCP, Oracle Cloud. Application modernization, cost optimization, and zero-downtime migrations."
+        keywords="cloud migration services, AWS migration, Azure cloud services, GCP migration, Oracle Cloud Infrastructure, cloud transformation, application modernization, multi-cloud strategy, cloud cost optimization, FinOps, hybrid cloud, cloud security"
+        url="https://paramanu.com/services/cloud-transformation"
+        structuredData={cloudSchema}
+      />
       <Header />
       
       {/* Hero Section */}

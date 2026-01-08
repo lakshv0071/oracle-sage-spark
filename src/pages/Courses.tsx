@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import { Database, Cloud, Code, Bot, Clock, Users, Award, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -193,8 +194,37 @@ const Courses = () => {
     category: string;
   } | null>(null);
 
+  const coursesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Technology Training Courses',
+    description: 'Professional IT training courses in databases, cloud, DevOps, programming, and AI.',
+    itemListElement: courseCategories.flatMap((cat, catIdx) => 
+      cat.courses.map((course, idx) => ({
+        '@type': 'ListItem',
+        position: catIdx * 6 + idx + 1,
+        item: {
+          '@type': 'Course',
+          name: course.name,
+          description: cat.description,
+          provider: {
+            '@type': 'Organization',
+            name: 'Paramanu Consulting',
+          },
+        },
+      }))
+    ),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Professional Technology Training Courses"
+        description="Expert-led IT training courses: PostgreSQL, Oracle, AWS, Azure, Kubernetes, Python, React, Machine Learning, and AI. Certification-ready courses with flexible schedules."
+        keywords="IT training courses, PostgreSQL course, Oracle training, AWS certification, Azure training, Kubernetes course, Python training, React course, machine learning course, DevOps training, database administration training"
+        url="https://paramanu.com/courses"
+        structuredData={coursesSchema}
+      />
       <Header />
       
       {/* Hero Section */}
