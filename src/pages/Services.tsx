@@ -6,6 +6,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const services = [
   {
@@ -427,8 +428,35 @@ const itemVariants = {
 };
 
 const Services = () => {
+  const servicesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Paramanu Consulting Services',
+    description: 'Enterprise IT managed services including Oracle, PostgreSQL, DevOps, SRE, and cloud solutions.',
+    itemListElement: services.map((service, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Service',
+        name: service.title,
+        description: service.description,
+        provider: {
+          '@type': 'Organization',
+          name: 'Paramanu Consulting',
+        },
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Enterprise IT Services"
+        description="Comprehensive enterprise IT services including Oracle, PostgreSQL, DevOps, SRE, cloud transformation, and 24/7 production support. Expert managed services for Fortune 500."
+        keywords="Oracle managed services, PostgreSQL DBA, DevOps consulting, SRE services, cloud migration, enterprise IT support, SAP services, production support"
+        url="https://paramanu.com/services"
+        structuredData={servicesSchema}
+      />
       <Header />
       
       {/* Hero Section */}
