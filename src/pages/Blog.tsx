@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 import { format } from "date-fns";
 
@@ -92,8 +93,27 @@ const Blog = () => {
     return format(new Date(dateString), "MMMM d, yyyy");
   };
 
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Paramanu Consulting Blog',
+    description: 'Expert insights on Oracle, cloud technologies, DevOps, and enterprise IT best practices.',
+    url: 'https://paramanu.com/blog',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Paramanu Consulting',
+    },
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Blog & Insights"
+        description="Expert insights and best practices on Oracle, PostgreSQL, cloud technologies, DevOps, SRE, and enterprise IT solutions from Paramanu Consulting."
+        keywords="Oracle blog, cloud computing articles, DevOps best practices, enterprise IT insights, database management tips, SRE articles"
+        url="https://paramanu.com/blog"
+        structuredData={blogSchema}
+      />
       <Header />
 
       {/* Hero Section */}

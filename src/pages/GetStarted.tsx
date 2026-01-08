@@ -7,6 +7,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { sendInquiryEmail } from "@/lib/emailjs";
 import { toast } from "sonner";
 
@@ -122,8 +123,23 @@ const GetStarted = () => {
     }
   };
 
+  const contactSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Get Started with Paramanu Consulting',
+    description: 'Contact Paramanu Consulting for enterprise IT services, Oracle, cloud, and DevOps solutions.',
+    url: 'https://paramanu.com/get-started',
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Get Started - Free Consultation"
+        description="Get a free consultation with Paramanu Consulting experts. Tell us about your Oracle, cloud, DevOps, or enterprise IT needs and we'll provide tailored solutions."
+        keywords="contact Paramanu, IT consulting quote, Oracle services inquiry, cloud migration consultation, DevOps assessment, enterprise IT support"
+        url="https://paramanu.com/get-started"
+        structuredData={contactSchema}
+      />
       <Header />
       
       {/* Hero Section */}
