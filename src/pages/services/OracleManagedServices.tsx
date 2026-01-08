@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Database, Shield, Clock, Users, CheckCircle, ArrowRight } from "lucide-react";
 
@@ -37,8 +38,28 @@ const benefits = [
 ];
 
 const OracleManagedServices = () => {
+  const oracleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Oracle Managed Services',
+    description: 'Enterprise-grade Oracle database management, administration, and 24/7 support services.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Paramanu Consulting',
+    },
+    serviceType: 'Database Management',
+    areaServed: 'Worldwide',
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Oracle Managed Services - Expert Oracle DBA Support"
+        description="Enterprise Oracle managed services with 99.99% uptime SLA. Expert Oracle DBA team for database administration, RAC, Data Guard, EBS, OCI migration, and 24/7 support."
+        keywords="Oracle managed services, Oracle DBA services, Oracle database administration, Oracle RAC support, Oracle Data Guard, Oracle EBS support, Oracle Cloud migration, Oracle 24/7 support, Oracle performance tuning, Oracle database optimization"
+        url="https://paramanu.com/services/oracle-managed-services"
+        structuredData={oracleSchema}
+      />
       <Header />
       
       {/* Hero Section */}

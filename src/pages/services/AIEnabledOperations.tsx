@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Brain, Sparkles, LineChart, Bot, CheckCircle, ArrowRight } from "lucide-react";
 
@@ -54,8 +55,28 @@ const stats = [
 ];
 
 const AIEnabledOperations = () => {
+  const aiSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'AI-Enabled Operations',
+    description: 'AI-powered IT operations with predictive analytics, AIOps, and intelligent automation.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Paramanu Consulting',
+    },
+    serviceType: 'AIOps',
+    areaServed: 'Worldwide',
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="AI-Enabled Operations - AIOps, Predictive Analytics, Automation"
+        description="Transform IT operations with AI. AIOps integration, predictive analytics, anomaly detection, intelligent automation, and self-healing systems. Reduce MTTR by 80%."
+        keywords="AIOps, AI operations, predictive analytics, anomaly detection, intelligent automation, self-healing systems, machine learning IT, IT automation, predictive maintenance, AI monitoring, MLOps"
+        url="https://paramanu.com/services/ai-enabled-operations"
+        structuredData={aiSchema}
+      />
       <Header />
       
       {/* Hero Section */}
