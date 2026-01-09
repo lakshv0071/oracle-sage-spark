@@ -17,7 +17,7 @@ const defaultMeta = {
   title: 'Paramanu Consulting | Enterprise Oracle, Cloud & DevOps Managed Services',
   description: 'Tier-1 Enterprise IT Consulting with 20+ years of Oracle, Cloud, DevOps, SRE, and AI-enabled Managed Services for Fortune 500 organizations. 99.99% uptime SLA.',
   keywords: 'Oracle consulting, enterprise IT services, DevOps, SRE, cloud migration, managed services, AI operations, Fortune 500 IT, Oracle DBA, cloud transformation',
-  image: 'https://www.paramanuconsulting.com/paramanu linkedin logo.png',
+  image: 'https://www.paramanuconsulting.com/paramanu%20linkedin%20logo.png',
   url: 'https://paramanu.com',
 };
 
@@ -43,16 +43,15 @@ const SEO = ({
     '@type': 'Organization',
     name: 'Paramanu Consulting',
     url: 'https://paramanu.com',
-    logo: 'https://www.paramanuconsulting.com/paramanu linkedin logo.png',
+    logo: 'https://www.paramanuconsulting.com/paramanu%20linkedin%20logo.png',
     description: defaultMeta.description,
     foundingDate: '2020',
     sameAs: [
       'https://www.linkedin.com/company/paramanu-consulting',
-      'https://twitter.com/ParamanuConsulting',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-XXX-XXX-XXXX',
+      email: 'info@paramanu.com',
       contactType: 'customer service',
       availableLanguage: ['English'],
     },
@@ -66,25 +65,31 @@ const SEO = ({
     ],
   };
 
-  // Professional Service structured data
+  // Professional Service structured data with required address field
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Paramanu Consulting',
     url: 'https://paramanu.com',
-    image: 'https://www.paramanuconsulting.com/paramanu linkedin logo.png',
+    image: 'https://www.paramanuconsulting.com/paramanu%20linkedin%20logo.png',
     description: defaultMeta.description,
     priceRange: '$$$',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Global',
+      addressRegion: 'Worldwide',
+      addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '37.7749',
+      longitude: '-122.4194',
+    },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
       opens: '09:00',
       closes: '18:00',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '150',
     },
   };
 
