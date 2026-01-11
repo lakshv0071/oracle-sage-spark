@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Database, Settings, Cpu, Shield, Headphones, Users, Briefcase, Globe, BarChart3 } from "lucide-react";
+import { Database, Settings, Cpu, Shield, Headphones, Users, Briefcase, Globe, BarChart3, ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
+import ScheduleModal from "./ScheduleModal";
 
 const services = [
   {
@@ -83,6 +86,8 @@ const cardVariants = {
 };
 
 const ServicesSection = () => {
+  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
+
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Background Elements */}
@@ -136,7 +141,7 @@ const ServicesSection = () => {
                 </p>
                 
                 {/* Features */}
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
@@ -144,11 +149,29 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
+
+                {/* Schedule Button */}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full mt-auto group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                  onClick={() => setIsScheduleOpen(true)}
+                >
+                  Schedule Consultation
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
               </div>
             </motion.div>
           ))}
         </motion.div>
       </div>
+
+      {/* Schedule Modal */}
+      <ScheduleModal
+        isOpen={isScheduleOpen}
+        onClose={() => setIsScheduleOpen(false)}
+        type="consultation"
+      />
     </section>
   );
 };
