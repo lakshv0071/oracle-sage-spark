@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   Database, Settings, Cpu, Shield, Headphones, Users, Briefcase, Globe, BarChart3,
   CheckCircle2, ArrowRight, Clock, DollarSign, Target, Zap
 } from "lucide-react";
+import ScheduleModal from "@/components/ScheduleModal";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -428,6 +430,8 @@ const itemVariants = {
 };
 
 const Services = () => {
+  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
+  
   const servicesSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -480,7 +484,7 @@ const Services = () => {
               From Oracle and SAP to DevOps and AI-driven operations, we deliver excellence at scale.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="gap-2">
+              <Button size="lg" className="gap-2" onClick={() => setIsScheduleOpen(true)}>
                 Schedule Consultation <ArrowRight className="w-4 h-4" />
               </Button>
               <Button size="lg" variant="outline">
@@ -698,6 +702,13 @@ const Services = () => {
       </section>
 
       <Footer />
+      
+      {/* Schedule Modal */}
+      <ScheduleModal
+        isOpen={isScheduleOpen}
+        onClose={() => setIsScheduleOpen(false)}
+        type="consultation"
+      />
     </div>
   );
 };
