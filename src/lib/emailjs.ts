@@ -45,7 +45,7 @@ export const sendInquiryEmail = async (data: InquiryData): Promise<boolean> => {
     const templateParams = {
       from_name: data.name,
       from_email: data.email,
-      to_email: 'sales@paramanu.com',
+      to_email: 'info@paramanuconsulting.com',
       reply_to: data.email,
       message: messageContent,
     };

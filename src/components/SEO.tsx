@@ -51,7 +51,8 @@ const SEO = ({
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'info@paramanu.com',
+      telephone: '+917989359581',
+      email: 'info@paramanuconsulting.com',
       contactType: 'customer service',
       availableLanguage: ['English'],
     },
