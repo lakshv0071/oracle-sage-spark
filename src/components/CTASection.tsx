@@ -47,13 +47,13 @@ const CTASection = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-muted-foreground">
-            <a href="tel:+1-800-555-0123" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="tel:+917989359581" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
-              <span>1-800-555-0123</span>
+              <span>+91 7989359581</span>
             </a>
-            <a href="mailto:enterprise@techadvisors.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="mailto:info@paramanuconsulting.com" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Mail className="w-4 h-4" />
-              <span>enterprise@techadvisors.com</span>
+              <span>info@paramanuconsulting.com</span>
             </a>
           </div>
         </motion.div>

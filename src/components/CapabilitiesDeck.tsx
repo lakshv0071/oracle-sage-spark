@@ -93,9 +93,9 @@ ENGAGEMENT MODELS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 CONTACT US
-Email: enterprise@techadvisors.com
-Phone: 1-800-555-0123
-Web: www.enterprisetechadvisors.com
+Email: info@paramanuconsulting.com
+Phone: +91 7989359581
+Web: www.paramanuconsulting.com
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     `;

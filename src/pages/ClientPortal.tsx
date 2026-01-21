@@ -249,13 +249,17 @@ const ClientPortal = () => {
               Our 24/7 support team is always here to help. Reach out via phone, email, or chat.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" variant="outline" className="gap-2">
-                <Headphones className="w-4 h-4" />
-                Call Support: +1 (888) 555-0123
+              <Button size="lg" variant="outline" className="gap-2" asChild>
+                <a href="tel:+917989359581">
+                  <Headphones className="w-4 h-4" />
+                  Call Support: +91 7989359581
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="gap-2">
-                <Mail className="w-4 h-4" />
-                Email: support@paramanu.com
+              <Button size="lg" variant="outline" className="gap-2" asChild>
+                <a href="mailto:info@paramanuconsulting.com">
+                  <Mail className="w-4 h-4" />
+                  Email: info@paramanuconsulting.com
+                </a>
               </Button>
             </div>
           </motion.div>
