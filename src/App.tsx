@@ -19,6 +19,10 @@ import About from "./pages/About";
 import Resources from "./pages/Resources";
 import ClientPortal from "./pages/ClientPortal";
 import GetStarted from "./pages/GetStarted";
+import Contact from "./pages/Contact";
+import Leadership from "./pages/Leadership";
+import CaseStudies from "./pages/CaseStudies";
+import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +50,10 @@ const App = () => (
             <Route path="/resources" element={<Resources />} />
             <Route path="/client-portal" element={<ClientPortal />} />
             <Route path="/get-started" element={<GetStarted />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/leadership" element={<Leadership />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/careers" element={<Careers />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
