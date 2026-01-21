@@ -33,11 +33,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Oracle Managed Services</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Cloud Transformation</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">DevOps & SRE</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">AI-Enabled Operations</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">24/7 Production Support</a></li>
+              <li><a href="/services/oracle-managed-services" className="text-muted-foreground hover:text-primary transition-colors">Oracle Managed Services</a></li>
+              <li><a href="/services/cloud-transformation" className="text-muted-foreground hover:text-primary transition-colors">Cloud Transformation</a></li>
+              <li><a href="/services/devops-sre" className="text-muted-foreground hover:text-primary transition-colors">DevOps & SRE</a></li>
+              <li><a href="/services/ai-enabled-operations" className="text-muted-foreground hover:text-primary transition-colors">AI-Enabled Operations</a></li>
+              <li><a href="/services/production-support" className="text-muted-foreground hover:text-primary transition-colors">24/7 Production Support</a></li>
             </ul>
           </div>
 
@@ -45,11 +45,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Leadership</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="/leadership" className="text-muted-foreground hover:text-primary transition-colors">Leadership</a></li>
+              <li><a href="/case-studies" className="text-muted-foreground hover:text-primary transition-colors">Case Studies</a></li>
+              <li><a href="/careers" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
+              <li><a href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -57,11 +57,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Blog & Insights</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Whitepapers</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Webinars</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Support Portal</a></li>
+              <li><a href="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog & Insights</a></li>
+              <li><a href="/resources#whitepapers" className="text-muted-foreground hover:text-primary transition-colors">Whitepapers</a></li>
+              <li><a href="/resources#events" className="text-muted-foreground hover:text-primary transition-colors">Webinars</a></li>
+              <li><a href="/resources" className="text-muted-foreground hover:text-primary transition-colors">Documentation</a></li>
+              <li><a href="/client-portal" className="text-muted-foreground hover:text-primary transition-colors">Support Portal</a></li>
             </ul>
           </div>
         </div>
