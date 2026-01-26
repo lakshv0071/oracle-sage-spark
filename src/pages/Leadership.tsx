@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { Linkedin, Mail } from "lucide-react";
 
 const leaders = [
@@ -76,8 +77,13 @@ const Leadership = () => {
       />
       <Header />
 
+      {/* Breadcrumbs */}
+      <div className="container pt-28 pb-4">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-8 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 grid-pattern opacity-30" />
         
