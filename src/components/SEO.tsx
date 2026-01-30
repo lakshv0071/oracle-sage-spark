@@ -42,7 +42,7 @@ const SEO = ({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Paramanu Consulting',
-    url: 'https://paramanu.com',
+    url: 'https://www.paramanuconsulting.com',
     logo: 'https://www.paramanuconsulting.com/paramanu%20linkedin%20logo.png',
     description: defaultMeta.description,
     foundingDate: '2020',
