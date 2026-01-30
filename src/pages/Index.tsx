@@ -14,11 +14,11 @@ const Index = () => {
     '@type': 'WebPage',
     name: 'Paramanu Consulting - Enterprise IT Managed Services',
     description: 'Tier-1 Enterprise IT Consulting with 20+ years of Oracle, Cloud, DevOps, SRE, and AI-enabled Managed Services for Fortune 500 organizations.',
-    url: 'https://paramanu.com',
+    url: 'https://www.paramanuconsulting.com',
     mainEntity: {
       '@type': 'Organization',
       name: 'Paramanu Consulting',
-      url: 'https://paramanu.com',
+      url: 'https://www.paramanuconsulting.com',
     },
   };
 
