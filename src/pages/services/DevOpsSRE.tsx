@@ -64,7 +64,7 @@ const DevOpsSRE = () => {
         title="DevOps & SRE Services - CI/CD, Kubernetes, Infrastructure as Code"
         description="Enterprise DevOps and SRE consulting. CI/CD pipeline design, Kubernetes orchestration, Terraform IaC, GitOps, observability, and platform engineering for 10x faster deployments."
         keywords="DevOps services, SRE consulting, CI/CD pipeline, Kubernetes consulting, Terraform, infrastructure as code, GitOps, platform engineering, observability, Prometheus, Grafana, Jenkins, GitHub Actions, site reliability engineering"
-        url="https://paramanu.com/services/devops-sre"
+        url="https://www.paramanuconsulting.com/services/devops-sre"
         structuredData={devopsSchema}
       />
       <Header />

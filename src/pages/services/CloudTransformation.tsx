@@ -71,7 +71,7 @@ const CloudTransformation = () => {
         title="Cloud Transformation - AWS, Azure, GCP Migration Services"
         description="Expert cloud migration and transformation services. Multi-cloud strategy for AWS, Azure, GCP, Oracle Cloud. Application modernization, cost optimization, and zero-downtime migrations."
         keywords="cloud migration services, AWS migration, Azure cloud services, GCP migration, Oracle Cloud Infrastructure, cloud transformation, application modernization, multi-cloud strategy, cloud cost optimization, FinOps, hybrid cloud, cloud security"
-        url="https://paramanu.com/services/cloud-transformation"
+        url="https://www.paramanuconsulting.com/services/cloud-transformation"
         structuredData={cloudSchema}
       />
       <Header />
