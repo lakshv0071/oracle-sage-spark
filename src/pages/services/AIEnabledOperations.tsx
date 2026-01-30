@@ -74,7 +74,7 @@ const AIEnabledOperations = () => {
         title="AI-Enabled Operations - AIOps, Predictive Analytics, Automation"
         description="Transform IT operations with AI. AIOps integration, predictive analytics, anomaly detection, intelligent automation, and self-healing systems. Reduce MTTR by 80%."
         keywords="AIOps, AI operations, predictive analytics, anomaly detection, intelligent automation, self-healing systems, machine learning IT, IT automation, predictive maintenance, AI monitoring, MLOps"
-        url="https://paramanu.com/services/ai-enabled-operations"
+        url="https://www.paramanuconsulting.com/services/ai-enabled-operations"
         structuredData={aiSchema}
       />
       <Header />

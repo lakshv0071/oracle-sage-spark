@@ -77,7 +77,7 @@ const ProductionSupport = () => {
         title="24/7 Production Support - Enterprise IT Support Services"
         description="Enterprise 24/7 production support with 99.99% uptime SLA. L2/L3/L4 support, 15-minute response time, proactive monitoring, incident management, and dedicated support teams."
         keywords="24/7 IT support, production support services, enterprise IT support, L2 L3 support, managed IT services, incident management, proactive monitoring, SLA support, dedicated support team, IT helpdesk"
-        url="https://paramanu.com/services/production-support"
+        url="https://www.paramanuconsulting.com/services/production-support"
         structuredData={supportSchema}
       />
       <Header />
