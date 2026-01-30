@@ -57,7 +57,7 @@ const OracleManagedServices = () => {
         title="Oracle Managed Services - Expert Oracle DBA Support"
         description="Enterprise Oracle managed services with 99.99% uptime SLA. Expert Oracle DBA team for database administration, RAC, Data Guard, EBS, OCI migration, and 24/7 support."
         keywords="Oracle managed services, Oracle DBA services, Oracle database administration, Oracle RAC support, Oracle Data Guard, Oracle EBS support, Oracle Cloud migration, Oracle 24/7 support, Oracle performance tuning, Oracle database optimization"
-        url="https://paramanu.com/services/oracle-managed-services"
+        url="https://www.paramanuconsulting.com/services/oracle-managed-services"
         structuredData={oracleSchema}
       />
       <Header />

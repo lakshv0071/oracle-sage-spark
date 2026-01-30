@@ -25,7 +25,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        url="https://paramanu.com"
+        url="https://www.paramanuconsulting.com"
         structuredData={homeStructuredData}
       />
       <Header />
