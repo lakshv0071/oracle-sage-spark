@@ -1,5 +1,5 @@
 # Paramanu Consulting - robots.txt
-# https://paramanu.com
+# https://www.paramanuconsulting.com
 
 User-agent: Googlebot
 Allow: /
@@ -26,7 +26,7 @@ Allow: /
 Crawl-delay: 2
 
 # Sitemap location
-Sitemap: https://paramanu.com/sitemap.xml
+Sitemap: https://www.paramanuconsulting.com/sitemap.xml
 
 # Disallow admin and private routes
 Disallow: /client-portal
