@@ -18,7 +18,7 @@ const defaultMeta = {
   description: 'Tier-1 Enterprise IT Consulting with 20+ years of Oracle, Cloud, DevOps, SRE, and AI-enabled Managed Services for Fortune 500 organizations. 99.99% uptime SLA.',
   keywords: 'Oracle consulting, enterprise IT services, DevOps, SRE, cloud migration, managed services, AI operations, Fortune 500 IT, Oracle DBA, cloud transformation',
   image: 'https://www.paramanuconsulting.com/paramanu%20linkedin%20logo.png',
-  url: 'https://paramanu.com',
+  url: 'https://www.paramanuconsulting.com',
 };
 
 const SEO = ({
