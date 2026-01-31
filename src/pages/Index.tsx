@@ -38,7 +38,6 @@ const Index = () => {
         <CTASection />
       </main>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };
