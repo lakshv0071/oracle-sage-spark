@@ -7,6 +7,7 @@ import StatsSection from "@/components/StatsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   const homeStructuredData = {
@@ -38,6 +39,7 @@ const Index = () => {
         <CTASection />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
