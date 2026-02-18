@@ -99,7 +99,7 @@ const Blog = () => {
     '@type': 'Blog',
     name: 'Paramanu Consulting Blog',
     description: 'Expert insights on Oracle, cloud technologies, DevOps, and enterprise IT best practices.',
-    url: 'https://paramanu.com/blog',
+    url: 'https://www.paramanuconsulting.com/blog',
     publisher: {
       '@type': 'Organization',
       name: 'Paramanu Consulting',
@@ -112,7 +112,7 @@ const Blog = () => {
         title="Blog & Insights"
         description="Expert insights and best practices on Oracle, PostgreSQL, cloud technologies, DevOps, SRE, and enterprise IT solutions from Paramanu Consulting."
         keywords="Oracle blog, cloud computing articles, DevOps best practices, enterprise IT insights, database management tips, SRE articles"
-        url="https://paramanu.com/blog"
+        url="https://www.paramanuconsulting.com/blog"
         structuredData={blogSchema}
       />
       <Header />

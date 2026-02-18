@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const solutions = [
   {
@@ -214,13 +215,18 @@ const Solutions = () => {
         title="Enterprise Technology Solutions"
         description="Proven enterprise solutions: cloud transformation, ERP management, infrastructure modernization, security & compliance, data analytics, DevOps, and disaster recovery."
         keywords="enterprise solutions, cloud transformation, Oracle EBS management, SAP solutions, infrastructure modernization, Kubernetes, security compliance, SOX HIPAA PCI-DSS, data analytics, DevOps transformation, disaster recovery"
-        url="https://paramanu.com/solutions"
+        url="https://www.paramanuconsulting.com/solutions"
         structuredData={solutionsSchema}
       />
       <Header />
+
+      {/* Breadcrumbs */}
+      <div className="container pt-28 pb-4">
+        <Breadcrumbs />
+      </div>
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <section className="relative pt-8 pb-20 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-glow opacity-40" />
         <div className="container relative z-10">
           <motion.div 

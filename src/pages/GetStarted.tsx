@@ -128,7 +128,7 @@ const GetStarted = () => {
     '@type': 'ContactPage',
     name: 'Get Started with Paramanu Consulting',
     description: 'Contact Paramanu Consulting for enterprise IT services, Oracle, cloud, and DevOps solutions.',
-    url: 'https://paramanu.com/get-started',
+    url: 'https://www.paramanuconsulting.com/get-started',
   };
 
   return (
@@ -137,7 +137,7 @@ const GetStarted = () => {
         title="Get Started - Free Consultation"
         description="Get a free consultation with Paramanu Consulting experts. Tell us about your Oracle, cloud, DevOps, or enterprise IT needs and we'll provide tailored solutions."
         keywords="contact Paramanu, IT consulting quote, Oracle services inquiry, cloud migration consultation, DevOps assessment, enterprise IT support"
-        url="https://paramanu.com/get-started"
+        url="https://www.paramanuconsulting.com/get-started"
         structuredData={contactSchema}
       />
       <Header />
