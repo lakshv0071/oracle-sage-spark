@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { 
   Lock, Mail, Eye, EyeOff, ArrowRight, Shield, 
   Clock, Headphones, FileText, BarChart3, Bell
@@ -54,6 +55,11 @@ const ClientPortal = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Client Portal | Paramanu Consulting</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="Secure client portal for Paramanu Consulting managed services clients." />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

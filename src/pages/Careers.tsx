@@ -90,7 +90,7 @@ const Careers = () => {
     hiringOrganization: {
       "@type": "Organization",
       name: "Paramanu Consulting",
-      url: "https://paramanu.com",
+      url: "https://www.paramanuconsulting.com",
     },
   };
 
@@ -99,7 +99,7 @@ const Careers = () => {
       <SEO
         title="Careers"
         description="Join Paramanu Consulting and work on challenging enterprise IT projects with a talented remote-first team."
-        url="https://paramanu.com/careers"
+        url="https://www.paramanuconsulting.com/careers"
         structuredData={careersSchema}
       />
       <Header />

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const industries = [
   {
@@ -234,11 +235,16 @@ const Industries = () => {
         title="Industry Solutions - Financial, Healthcare, Manufacturing & More"
         description="Specialized enterprise IT solutions for financial services, healthcare, manufacturing, retail, logistics, government, energy, travel, and education. Compliance expertise included."
         keywords="financial services IT, healthcare IT solutions, HIPAA compliance, manufacturing ERP, retail technology, logistics IT, government IT services, FedRAMP, energy utilities IT, education technology"
-        url="https://paramanu.com/industries"
+        url="https://www.paramanuconsulting.com/industries"
         structuredData={industriesSchema}
       />
       <Header />
       
+      {/* Breadcrumbs */}
+      <div className="container pt-28 pb-4">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-glow opacity-40" />

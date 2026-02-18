@@ -64,7 +64,7 @@ const Leadership = () => {
     "@type": "AboutPage",
     name: "Leadership - Paramanu Consulting",
     description: "Meet the leadership team driving enterprise IT excellence at Paramanu Consulting.",
-    url: "https://paramanu.com/leadership",
+    url: "https://www.paramanuconsulting.com/leadership",
   };
 
   return (
@@ -72,7 +72,7 @@ const Leadership = () => {
       <SEO
         title="Leadership"
         description="Meet the leadership team at Paramanu Consulting driving enterprise IT excellence and innovation."
-        url="https://paramanu.com/leadership"
+        url="https://www.paramanuconsulting.com/leadership"
         structuredData={leadershipSchema}
       />
       <Header />

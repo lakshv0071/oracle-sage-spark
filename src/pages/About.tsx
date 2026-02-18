@@ -78,12 +78,14 @@ const itemVariants = {
 const About = () => {
   const aboutSchema = {
     '@context': 'https://schema.org',
-    '@type': 'AboutPage',
+      '@type': 'AboutPage',
     name: 'About Paramanu Consulting',
+    url: 'https://www.paramanuconsulting.com/about',
     description: 'Learn about Paramanu Consulting - your trusted enterprise technology partner with expertise in Oracle, cloud, DevOps, and AI-enabled operations.',
     mainEntity: {
       '@type': 'Organization',
       name: 'Paramanu Consulting',
+      url: 'https://www.paramanuconsulting.com',
       foundingDate: '2025-12',
       numberOfEmployees: '15+',
       knowsAbout: expertise.map(e => e.name),
@@ -96,7 +98,7 @@ const About = () => {
         title="About Us"
         description="Paramanu Consulting - Founded by enterprise technology veterans with 20+ years experience. 100% remote-first company delivering Oracle, Cloud, DevOps, and AI-enabled managed services."
         keywords="about Paramanu Consulting, enterprise IT consulting, remote IT company, Oracle experts, DevOps team, technology partner"
-        url="https://paramanu.com/about"
+        url="https://www.paramanuconsulting.com/about"
         structuredData={aboutSchema}
       />
       <Header />

@@ -80,7 +80,7 @@ const Contact = () => {
     "@type": "ContactPage",
     name: "Contact Paramanu Consulting",
     description: "Get in touch with our enterprise IT consulting team.",
-    url: "https://paramanu.com/contact",
+    url: "https://www.paramanuconsulting.com/contact",
   };
 
   return (
@@ -88,7 +88,7 @@ const Contact = () => {
       <SEO
         title="Contact Us"
         description="Get in touch with Paramanu Consulting for enterprise IT services, Oracle managed services, and cloud solutions."
-        url="https://paramanu.com/contact"
+        url="https://www.paramanuconsulting.com/contact"
         structuredData={contactSchema}
       />
       <Header />

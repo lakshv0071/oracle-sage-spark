@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const featuredResources = [
   {
@@ -168,7 +169,7 @@ const Resources = () => {
     '@type': 'CollectionPage',
     name: 'Paramanu Consulting Resources',
     description: 'Whitepapers, case studies, webinars, and expert insights for enterprise IT.',
-    url: 'https://paramanu.com/resources',
+    url: 'https://www.paramanuconsulting.com/resources',
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: featuredResources.map((resource, index) => ({
@@ -189,10 +190,15 @@ const Resources = () => {
         title="Resources - Whitepapers, Case Studies & Expert Insights"
         description="Free enterprise IT resources: whitepapers on cloud migration, Oracle optimization guides, DevOps webinars, case studies, and industry best practices."
         keywords="IT whitepapers, cloud migration guide, Oracle EBS optimization, DevOps webinars, enterprise case studies, IT best practices, technology resources, digital transformation guide"
-        url="https://paramanu.com/resources"
+        url="https://www.paramanuconsulting.com/resources"
         structuredData={resourcesSchema}
       />
       <Header />
+
+      {/* Breadcrumbs */}
+      <div className="container pt-28 pb-4">
+        <Breadcrumbs />
+      </div>
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">

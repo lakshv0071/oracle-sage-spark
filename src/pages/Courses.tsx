@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { motion } from "framer-motion";
 import { Database, Cloud, Code, Bot, Clock, Users, Award, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -222,11 +223,16 @@ const Courses = () => {
         title="Professional Technology Training Courses"
         description="Expert-led IT training courses: PostgreSQL, Oracle, AWS, Azure, Kubernetes, Python, React, Machine Learning, and AI. Certification-ready courses with flexible schedules."
         keywords="IT training courses, PostgreSQL course, Oracle training, AWS certification, Azure training, Kubernetes course, Python training, React course, machine learning course, DevOps training, database administration training"
-        url="https://paramanu.com/courses"
+        url="https://www.paramanuconsulting.com/courses"
         structuredData={coursesSchema}
       />
       <Header />
-      
+
+      {/* Breadcrumbs */}
+      <div className="container pt-28 pb-4">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-background to-background">
         <div className="container mx-auto px-4">

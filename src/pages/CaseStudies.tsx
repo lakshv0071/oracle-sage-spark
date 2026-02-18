@@ -76,7 +76,7 @@ const CaseStudies = () => {
     "@type": "CollectionPage",
     name: "Case Studies - Paramanu Consulting",
     description: "Explore our success stories and client case studies in enterprise IT consulting.",
-    url: "https://paramanu.com/case-studies",
+    url: "https://www.paramanuconsulting.com/case-studies",
   };
 
   return (
@@ -84,7 +84,7 @@ const CaseStudies = () => {
       <SEO
         title="Case Studies"
         description="Explore success stories from our enterprise IT consulting projects including Oracle migrations, DevOps transformations, and managed services."
-        url="https://paramanu.com/case-studies"
+        url="https://www.paramanuconsulting.com/case-studies"
         structuredData={caseStudiesSchema}
       />
       <Header />
