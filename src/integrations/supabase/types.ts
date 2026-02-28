@@ -59,6 +59,45 @@ export type Database = {
         }
         Relationships: []
       }
+      registrations: {
+        Row: {
+          college_name: string
+          consent: boolean
+          created_at: string
+          email: string
+          full_name: string
+          heard_from: string | null
+          id: string
+          phone: string
+          whatsapp_number: string | null
+          year_of_study: string
+        }
+        Insert: {
+          college_name: string
+          consent?: boolean
+          created_at?: string
+          email: string
+          full_name: string
+          heard_from?: string | null
+          id?: string
+          phone: string
+          whatsapp_number?: string | null
+          year_of_study: string
+        }
+        Update: {
+          college_name?: string
+          consent?: boolean
+          created_at?: string
+          email?: string
+          full_name?: string
+          heard_from?: string | null
+          id?: string
+          phone?: string
+          whatsapp_number?: string | null
+          year_of_study?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
