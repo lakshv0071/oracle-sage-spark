@@ -29,6 +29,7 @@ const Index = () => {
         url="https://www.paramanuconsulting.com"
         structuredData={homeStructuredData}
       />
+      <ProgramPopup />
       <Header />
       <main>
         <HeroSection />

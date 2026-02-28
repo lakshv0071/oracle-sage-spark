@@ -55,6 +55,7 @@ const App = () => (
             <Route path="/leadership" element={<Leadership />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/python-full-stack" element={<PythonFullStack />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
