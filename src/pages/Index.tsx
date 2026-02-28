@@ -7,6 +7,7 @@ import StatsSection from "@/components/StatsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import ProgramPopup from "@/components/ProgramPopup";
 
 const Index = () => {
   const homeStructuredData = {
