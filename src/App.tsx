@@ -23,6 +23,7 @@ import Contact from "./pages/Contact";
 import Leadership from "./pages/Leadership";
 import CaseStudies from "./pages/CaseStudies";
 import Careers from "./pages/Careers";
+import PythonFullStack from "./pages/PythonFullStack";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
