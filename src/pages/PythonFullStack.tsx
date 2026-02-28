@@ -73,7 +73,7 @@ const PythonFullStack = () => {
     setLoading(true);
     try {
       // Store in Supabase
-      const { error } = await supabase.from("registrations").insert({
+      const { error } = await (supabase as any).from("registrations").insert({
         full_name: form.fullName,
         email: form.email,
         phone: form.phone,
