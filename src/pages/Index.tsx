@@ -7,6 +7,7 @@ import StatsSection from "@/components/StatsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import ProgramPopup from "@/components/ProgramPopup";
 
 const Index = () => {
   const homeStructuredData = {
@@ -28,6 +29,7 @@ const Index = () => {
         url="https://www.paramanuconsulting.com"
         structuredData={homeStructuredData}
       />
+      <ProgramPopup />
       <Header />
       <main>
         <HeroSection />
