@@ -132,7 +132,7 @@ const PythonFullStack = () => {
         return;
       }
 
-      console.log('✅ Registration saved:', data);
+      console.log('✅ Registration saved successfully');
 
       // Step 2: Registration saved — show success immediately
       setSubmitted(true);
