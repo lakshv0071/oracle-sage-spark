@@ -25,8 +25,15 @@ import CaseStudies from "./pages/CaseStudies";
 import Careers from "./pages/Careers";
 import PythonFullStack from "./pages/PythonFullStack";
 import NotFound from "./pages/NotFound";
+import PythonFullStackWidget from "./components/PythonFullStackWidget";
 
 const queryClient = new QueryClient();
+
+const FloatingWidget = () => {
+  const location = useLocation();
+  if (location.pathname === "/python-full-stack") return null;
+  return <PythonFullStackWidget />;
+};
 
 const App = () => (
   <HelmetProvider>
