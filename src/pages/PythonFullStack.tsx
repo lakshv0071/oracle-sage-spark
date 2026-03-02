@@ -111,7 +111,8 @@ const PythonFullStack = () => {
 
     setLoading(true);
     try {
-      const { error } = await (supabase as any).from("registrations").insert({
+      // Step 1: Save to database FIRST
+      const { error } = await supabase.from("registrations").insert({
         full_name: form.fullName,
         email: form.email,
         phone: fullPhone,
@@ -121,24 +122,35 @@ const PythonFullStack = () => {
         heard_from: form.heardFrom,
         consent: form.consent,
       });
-      if (error) throw error;
+      if (error) {
+        console.error("Supabase insert error:", error);
+        toast({ title: `Registration failed: ${error.message}`, variant: "destructive" });
+        setLoading(false);
+        return;
+      }
 
-      await sendInquiryEmail({
-        type: "Python Full Stack Program Registration",
-        name: form.fullName,
-        email: form.email,
-        phone: fullPhone,
-        company: form.college,
-        message: `WhatsApp: ${fullWhatsapp}\nYear of Study: ${form.yearOfStudy}\nHeard From: ${form.heardFrom}`,
-      });
-
-      // TODO: Send confirmation email to user (integrate Resend or another provider)
-      // TODO: Integrate WhatsApp Business API / Twilio for WhatsApp confirmation
-
+      // Step 2: Registration saved — show success immediately
       setSubmitted(true);
+
+      // Step 3: Send admin email in background — failure does NOT affect user
+      try {
+        await sendInquiryEmail({
+          type: "Python Full Stack Program Registration",
+          name: form.fullName,
+          email: form.email,
+          phone: fullPhone,
+          company: form.college,
+          message: `WhatsApp: ${fullWhatsapp}\nYear of Study: ${form.yearOfStudy}\nHeard From: ${form.heardFrom}`,
+        });
+      } catch (emailErr) {
+        console.error("Admin email failed (registration still saved):", emailErr);
+      }
+
+      // TODO: verify EMAIL_SERVICE_API_KEY is set in .env
+      // TODO: Send confirmation email to user (integrate Resend or another provider)
     } catch (err) {
-      console.error(err);
-      toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
+      console.error("Registration error:", err);
+      toast({ title: `Registration failed: ${err instanceof Error ? err.message : "Unknown error"}`, variant: "destructive" });
     } finally {
       setLoading(false);
     }
