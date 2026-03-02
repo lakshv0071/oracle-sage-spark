@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Services", href: "/services" },
   { label: "Courses", href: "/courses" },
+  { label: "Python Full Stack", href: "/python-full-stack", highlight: true },
   { label: "Solutions", href: "/solutions" },
   { label: "Industries", href: "/industries" },
   { label: "Blog & Insights", href: "/blog" },
@@ -37,9 +38,18 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className={`text-sm font-medium transition-colors ${
+                  item.highlight
+                    ? "text-accent hover:text-accent/80 flex items-center gap-1"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
-                {item.label}
+                {item.highlight && "🔥"} {item.label}
+                {item.highlight && (
+                  <span className="text-[10px] bg-accent text-accent-foreground px-1.5 py-0.5 rounded-full font-bold leading-none">
+                    New
+                  </span>
+                )}
               </a>
             ))}
           </nav>
@@ -76,10 +86,17 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-lg transition-colors"
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                    item.highlight
+                      ? "text-accent hover:bg-accent/10"
+                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
-                  {item.label}
+                  {item.highlight && "🔥 "}{item.label}
+                  {item.highlight && (
+                    <span className="ml-2 text-[10px] bg-accent text-accent-foreground px-1.5 py-0.5 rounded-full font-bold">New</span>
+                  )}
                 </a>
               ))}
               <div className="flex flex-col gap-2 mt-4 px-4">

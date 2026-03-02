@@ -111,7 +111,8 @@ const PythonFullStack = () => {
 
     setLoading(true);
     try {
-      const { error } = await (supabase as any).from("registrations").insert({
+      // Step 1: Save to database FIRST
+      const { error } = await supabase.from("registrations").insert({
         full_name: form.fullName,
         email: form.email,
         phone: fullPhone,
@@ -121,24 +122,35 @@ const PythonFullStack = () => {
         heard_from: form.heardFrom,
         consent: form.consent,
       });
-      if (error) throw error;
+      if (error) {
+        console.error("Supabase insert error:", error);
+        toast({ title: `Registration failed: ${error.message}`, variant: "destructive" });
+        setLoading(false);
+        return;
+      }
 
-      await sendInquiryEmail({
-        type: "Python Full Stack Program Registration",
-        name: form.fullName,
-        email: form.email,
-        phone: fullPhone,
-        company: form.college,
-        message: `WhatsApp: ${fullWhatsapp}\nYear of Study: ${form.yearOfStudy}\nHeard From: ${form.heardFrom}`,
-      });
-
-      // TODO: Send confirmation email to user (integrate Resend or another provider)
-      // TODO: Integrate WhatsApp Business API / Twilio for WhatsApp confirmation
-
+      // Step 2: Registration saved — show success immediately
       setSubmitted(true);
+
+      // Step 3: Send admin email in background — failure does NOT affect user
+      try {
+        await sendInquiryEmail({
+          type: "Python Full Stack Program Registration",
+          name: form.fullName,
+          email: form.email,
+          phone: fullPhone,
+          company: form.college,
+          message: `WhatsApp: ${fullWhatsapp}\nYear of Study: ${form.yearOfStudy}\nHeard From: ${form.heardFrom}`,
+        });
+      } catch (emailErr) {
+        console.error("Admin email failed (registration still saved):", emailErr);
+      }
+
+      // TODO: verify EMAIL_SERVICE_API_KEY is set in .env
+      // TODO: Send confirmation email to user (integrate Resend or another provider)
     } catch (err) {
-      console.error(err);
-      toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
+      console.error("Registration error:", err);
+      toast({ title: `Registration failed: ${err instanceof Error ? err.message : "Unknown error"}`, variant: "destructive" });
     } finally {
       setLoading(false);
     }
@@ -587,10 +599,13 @@ const PythonFullStack = () => {
                   >
                     <CheckCircle2 className="w-10 h-10 text-primary" />
                   </motion.div>
-                  <h2 className="text-3xl font-bold text-foreground mb-3">You're In! 🎉</h2>
-                  <p className="text-muted-foreground mb-2">We'll contact you within 24 hours.</p>
+                  <h2 className="text-3xl font-bold text-foreground mb-3">🎉 You're Registered!</h2>
+                  <p className="text-muted-foreground mb-2">We'll contact <strong className="text-foreground">{form.fullName}</strong> within 24 hours.</p>
+                  <p className="text-sm text-muted-foreground mb-1">
+                    A confirmation email has been sent to <strong className="text-foreground">{form.email}</strong>
+                  </p>
                   <p className="text-sm text-muted-foreground mb-4">
-                    ✅ Registration successful! You'll receive a WhatsApp message on your number shortly from our team.
+                    ✅ You'll also receive a WhatsApp message shortly from our team.
                   </p>
                   <div className="bg-accent/10 border border-accent/30 rounded-xl p-4 mb-6">
                     <p className="text-sm text-foreground font-medium">💬 Need help? Chat with us anytime using the chat widget below 👇</p>
