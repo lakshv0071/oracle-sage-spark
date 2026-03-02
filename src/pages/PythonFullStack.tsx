@@ -110,49 +110,79 @@ const PythonFullStack = () => {
     const fullWhatsapp = sameAsPhone ? fullPhone : `${whatsappCountry} ${form.whatsapp}`;
 
     setLoading(true);
+    
+    const payload = {
+      full_name: form.fullName,
+      email: form.email,
+      phone: fullPhone,
+      whatsapp_number: fullWhatsapp,
+      college_name: form.college,
+      year_of_study: form.yearOfStudy,
+      heard_from: form.heardFrom,
+      consent: form.consent,
+    };
+
     try {
       console.log('📤 Submitting registration...');
       
-      // Step 1: Save to database FIRST
-      const { error } = await supabase.from("registrations").insert({
-        full_name: form.fullName,
-        email: form.email,
-        phone: fullPhone,
-        whatsapp_number: fullWhatsapp,
-        college_name: form.college,
-        year_of_study: form.yearOfStudy,
-        heard_from: form.heardFrom,
-        consent: form.consent,
-      });
-      
-      if (error) {
-        console.error("❌ Supabase insert error:", error.code, error.message, error.details);
-        toast({ title: `Registration failed: ${error.message}`, variant: "destructive" });
-        setLoading(false);
-        return;
+      let saved = false;
+
+      // Strategy 1: Try Netlify proxy function (avoids direct Supabase connection issues)
+      try {
+        console.log('📤 Trying Netlify proxy...');
+        const proxyRes = await fetch('/.netlify/functions/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        
+        if (proxyRes.ok) {
+          console.log('✅ Registration saved via Netlify proxy');
+          saved = true;
+        } else {
+          const proxyErr = await proxyRes.text();
+          console.warn('⚠️ Netlify proxy failed:', proxyRes.status, proxyErr);
+        }
+      } catch (proxyErr) {
+        console.warn('⚠️ Netlify proxy not available:', proxyErr);
       }
 
-      console.log('✅ Registration saved successfully');
+      // Strategy 2: Fallback to direct Supabase insert
+      if (!saved) {
+        console.log('📤 Trying direct Supabase insert...');
+        const { error } = await supabase.from("registrations").insert(payload);
+        
+        if (error) {
+          console.error("❌ Supabase insert error:", error.code, error.message, error.details);
+          toast({ title: `Registration failed: ${error.message}`, variant: "destructive" });
+          setLoading(false);
+          return;
+        }
+        console.log('✅ Registration saved via direct Supabase');
+        saved = true;
+      }
 
-      // Step 2: Registration saved — show success immediately
-      setSubmitted(true);
-      setLoading(false);
+      if (saved) {
+        // Show success immediately
+        setSubmitted(true);
+        setLoading(false);
 
-      // Step 3: Send admin email in background — failure does NOT affect user
-      sendInquiryEmail({
-        type: "Python Full Stack Program Registration",
-        name: form.fullName,
-        email: form.email,
-        phone: fullPhone,
-        company: form.college,
-        message: `WhatsApp: ${fullWhatsapp}\nYear of Study: ${form.yearOfStudy}\nHeard From: ${form.heardFrom}`,
-      }).catch(emailErr => {
-        console.warn("⚠️ Admin email failed (registration still saved):", emailErr);
-      });
+        // Send admin email in background — failure does NOT affect user
+        sendInquiryEmail({
+          type: "Python Full Stack Program Registration",
+          name: form.fullName,
+          email: form.email,
+          phone: fullPhone,
+          company: form.college,
+          message: `WhatsApp: ${fullWhatsapp}\nYear of Study: ${form.yearOfStudy}\nHeard From: ${form.heardFrom}`,
+        }).catch(emailErr => {
+          console.warn("⚠️ Admin email failed (registration still saved):", emailErr);
+        });
+      }
     } catch (err) {
       console.error("❌ Network/fetch error:", err);
       const msg = err instanceof Error ? err.message : "Unknown error";
-      toast({ title: `Network error: ${msg}. Please check your connection and try again.`, variant: "destructive" });
+      toast({ title: `Registration failed. Please try again or contact us directly.`, variant: "destructive" });
       setLoading(false);
     }
   };
