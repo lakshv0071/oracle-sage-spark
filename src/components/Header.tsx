@@ -38,9 +38,18 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className={`text-sm font-medium transition-colors ${
+                  item.highlight
+                    ? "text-accent hover:text-accent/80 flex items-center gap-1"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
-                {item.label}
+                {item.highlight && "🔥"} {item.label}
+                {item.highlight && (
+                  <span className="text-[10px] bg-accent text-accent-foreground px-1.5 py-0.5 rounded-full font-bold leading-none">
+                    New
+                  </span>
+                )}
               </a>
             ))}
           </nav>
