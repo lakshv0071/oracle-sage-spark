@@ -523,15 +523,7 @@ const PythonFullStack = () => {
           <div className="container">
             <motion.div className="text-center mb-12 p-8 rounded-2xl bg-accent/10 border border-accent/30" {...fadeInUp}>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">🔥 Limited Seats Available — Next Batch Starting Soon</h2>
-              {/* TODO: Configure actual countdown date */}
-              <div className="flex items-center justify-center gap-6 mt-6">
-                {[{ val: "15", label: "Days" }, { val: "08", label: "Hours" }, { val: "42", label: "Mins" }].map((t) => (
-                  <div key={t.label} className="text-center">
-                    <div className="text-3xl font-bold text-accent">{t.val}</div>
-                    <div className="text-xs text-muted-foreground">{t.label}</div>
-                  </div>
-                ))}
-              </div>
+              <CountdownTimer targetDate="2025-04-01T00:00:00+05:30" />
             </motion.div>
 
             {/* Testimonials */}
