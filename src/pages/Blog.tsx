@@ -247,45 +247,6 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Blog Detail Modal */}
-      {selectedBlog && (
-        <div className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-card border border-border rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto"
-          >
-            <div className="p-8">
-              <div className="flex items-center justify-between mb-6">
-                <Badge variant="secondary">{selectedBlog.category}</Badge>
-                <Button variant="ghost" size="sm" onClick={() => setSelectedBlog(null)}>
-                  Close
-                </Button>
-              </div>
-              <h1 className="text-3xl font-bold mb-4 text-foreground">{selectedBlog.title}</h1>
-              <div className="flex items-center gap-4 text-muted-foreground mb-8">
-                <span className="flex items-center gap-2">
-                  <User className="h-4 w-4" />
-                  {selectedBlog.author}
-                </span>
-                <span className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
-                  {formatDate(selectedBlog.published_at)}
-                </span>
-              </div>
-              <div className="prose prose-lg max-w-none text-foreground">
-                <p className="text-lg text-muted-foreground mb-6">{selectedBlog.excerpt}</p>
-                {selectedBlog.content && (
-                  <div 
-                    className="blog-html-content"
-                    dangerouslySetInnerHTML={{ __html: selectedBlog.content }} 
-                  />
-                )}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      )}
 
       <Footer />
     </div>
