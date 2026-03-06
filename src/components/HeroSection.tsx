@@ -40,9 +40,9 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <span className="text-gradient-primary">AI-Powered</span> Managed
+            <span className="text-gradient-primary">Your IT Runs.</span> Your
             <br />
-            <span className="text-muted-foreground">Services at Scale</span>
+            <span className="text-muted-foreground">Business Grows.</span>
           </motion.h1>
           
           {/* Subheadline */}
@@ -52,8 +52,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Expert team delivering enterprise-grade PostgreSQL, Oracle, DevOps, SRE, and AI-enabled managed services. 
-            Your uptime is our reputation.
+            We manage Oracle, Cloud, and DevOps infrastructure so your team can focus on 
+            what drives revenue. Backed by a 99.99% uptime SLA and 24/7 global operations.
           </motion.p>
           
           {/* CTAs */}
@@ -63,8 +63,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <Button variant="hero" size="xl" onClick={() => setIsScheduleOpen(true)}>
-              Schedule Assessment
+            <Button variant="hero" size="xl" onClick={() => { setIsScheduleOpen(true); const w = window as any; if (typeof w.gtag === 'function') w.gtag('event', 'schedule_assessment_click', { button_location: 'hero' }); }}>
+              Get Your IT Assessment
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="heroOutline" size="xl" onClick={() => setIsCaseStudiesOpen(true)}>

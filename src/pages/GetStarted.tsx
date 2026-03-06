@@ -105,6 +105,7 @@ const GetStarted = () => {
     setIsSubmitting(false);
 
     if (success) {
+      const w = window as any; if (typeof w.gtag === 'function') w.gtag('event', 'consultation_form_submit', { company_size: formData.companySize, services: formData.services.join(','), timeline: formData.timeline });
       toast.success("Request submitted! We'll contact you within 24 hours.");
       setFormData({
         firstName: "",
@@ -397,20 +398,14 @@ const GetStarted = () => {
 
               {/* Contact Info */}
               <div className="glass-card rounded-2xl p-6">
-                <h3 className="text-lg font-bold mb-4">Prefer to Talk?</h3>
+                <h3 className="text-lg font-bold mb-4">Need Answers Before You Commit?</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Our team is available to discuss your needs directly.
+                  Our solutions architects have handled environments like yours — Oracle, SAP, cloud, DevOps. 
+                  A 15-minute call can save weeks of evaluation. No sales pitch, just clarity.
                 </p>
-                <div className="space-y-3">
-                  <a href="tel:+18885550123" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
-                    <Phone className="w-4 h-4" />
-                    +1 (888) 555-0123
-                  </a>
-                  <a href="mailto:sales@paramanu.com" className="flex items-center gap-2 text-sm hover:text-primary transition-colors">
-                    <Mail className="w-4 h-4" />
-                    sales@paramanu.com
-                  </a>
-                </div>
+                <Button variant="hero" size="lg" className="w-full" asChild>
+                  <a href="tel:+917989359581">Book a 15-Minute Call</a>
+                </Button>
               </div>
 
               {/* Trusted By */}

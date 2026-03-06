@@ -26,6 +26,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
+        title="Enterprise Oracle, Cloud & DevOps Managed Services"
+        description="Paramanu Consulting delivers 24/7 Oracle, Cloud, DevOps & AI-powered managed services for enterprise IT. 99.99% uptime SLA."
+        keywords="enterprise IT managed services, Oracle DBA services, cloud managed services, DevOps consulting India, 24/7 IT support, AI operations"
         url="https://www.paramanuconsulting.com"
         structuredData={homeStructuredData}
       />

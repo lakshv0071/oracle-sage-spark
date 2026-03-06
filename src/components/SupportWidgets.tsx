@@ -50,6 +50,7 @@ const SupportWidgets = ({ userName, userEmail }: SupportWidgetsProps) => {
         target="_blank"
         rel="noopener noreferrer"
         title="Chat with us on WhatsApp"
+        onClick={() => { const w = window as any; if (typeof w.gtag === 'function') w.gtag('event', 'whatsapp_chat_click', { page_path: window.location.pathname }); }}
         className="fixed bottom-24 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200 group"
       >
         <MessageCircle className="w-7 h-7 text-white" />
