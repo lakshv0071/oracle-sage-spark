@@ -15,6 +15,17 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'framer-motion': ['framer-motion'],
+          'supabase': ['@supabase/supabase-js'],
+          'router': ['react-router-dom'],
+        },
+      },
+    },
+  },
   define: {
     // Fallback values for production builds (these are public/anon keys, safe to embed)
     ...((!process.env.VITE_SUPABASE_URL) && {

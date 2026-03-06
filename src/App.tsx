@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
@@ -30,6 +31,19 @@ import PythonFullStackWidget from "./components/PythonFullStackWidget";
 
 const queryClient = new QueryClient();
 
+const GA4RouteTracker = () => {
+  const location = useLocation();
+  useEffect(() => {
+    const w = window as any;
+    if (typeof w.gtag === 'function') {
+      w.gtag('config', 'G-18L5003T08', {
+        page_path: location.pathname + location.search,
+      });
+    }
+  }, [location]);
+  return null;
+};
+
 const FloatingWidget = () => {
   const location = useLocation();
   if (location.pathname === "/python-full-stack") return null;
@@ -43,6 +57,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <GA4RouteTracker />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
