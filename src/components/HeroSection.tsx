@@ -63,8 +63,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <Button variant="hero" size="xl" onClick={() => setIsScheduleOpen(true)}>
-              Schedule Assessment
+            <Button variant="hero" size="xl" onClick={() => { setIsScheduleOpen(true); const w = window as any; if (typeof w.gtag === 'function') w.gtag('event', 'schedule_assessment_click', { button_location: 'hero' }); }}>
+              Get Your IT Assessment
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="heroOutline" size="xl" onClick={() => setIsCaseStudiesOpen(true)}>

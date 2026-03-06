@@ -37,11 +37,11 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button variant="hero" size="xl" onClick={() => setIsScheduleOpen(true)}>
+            <Button variant="hero" size="xl" onClick={() => { setIsScheduleOpen(true); const w = window as any; if (typeof w.gtag === 'function') w.gtag('event', 'schedule_assessment_click', { button_location: 'cta_section' }); }}>
               Schedule a Consultation
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button variant="heroOutline" size="xl" onClick={() => setIsDeckOpen(true)}>
+            <Button variant="heroOutline" size="xl" onClick={() => { setIsDeckOpen(true); const w = window as any; if (typeof w.gtag === 'function') w.gtag('event', 'capabilities_deck_download'); }}>
               Download Capabilities Deck
             </Button>
           </div>

@@ -86,8 +86,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Contact Us"
-        description="Get in touch with Paramanu Consulting for enterprise IT services, Oracle managed services, and cloud solutions."
+        title="Contact Us - Enterprise IT Consulting"
+        description="Contact Paramanu Consulting for Oracle, Cloud, and DevOps managed services. Free 30-minute consultation. Response within 24 hours."
+        keywords="contact IT consulting, Oracle consulting inquiry, enterprise IT support contact, DevOps services quote, managed services consultation"
         url="https://www.paramanuconsulting.com/contact"
         structuredData={contactSchema}
       />
