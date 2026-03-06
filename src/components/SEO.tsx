@@ -43,7 +43,7 @@ const SEO = ({
     '@type': 'Organization',
     name: 'Paramanu Consulting',
     url: 'https://www.paramanuconsulting.com',
-    logo: 'https://www.paramanuconsulting.com/paramanu%20linkedin%20logo.png',
+    logo: 'https://www.paramanuconsulting.com/paramanu-linkedin-logo.png',
     description: defaultMeta.description,
     foundingDate: '2020',
     sameAs: [
