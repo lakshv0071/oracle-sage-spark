@@ -26,11 +26,13 @@ import Leadership from "./pages/Leadership";
 import CaseStudies from "./pages/CaseStudies";
 import Careers from "./pages/Careers";
 import PythonFullStack from "./pages/PythonFullStack";
+import MarketingAssets from "./pages/MarketingAssets";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
 import NotFound from "./pages/NotFound";
 import PythonFullStackWidget from "./components/PythonFullStackWidget";
+import ExitIntentPopup from "./components/ExitIntentPopup";
 
 const queryClient = new QueryClient();
 
@@ -83,12 +85,14 @@ const App = () => (
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/python-full-stack" element={<PythonFullStack />} />
+            <Route path="/marketing-assets" element={<MarketingAssets />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingWidget />
+          <ExitIntentPopup />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
