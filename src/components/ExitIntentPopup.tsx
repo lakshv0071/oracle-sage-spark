@@ -141,7 +141,7 @@ const ExitIntentPopup = () => {
                       <Clock className="w-3.5 h-3.5" /> Limited Time Offer
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
-                      Wait! Get ₹2,000 Off the Python Full Stack Program
+                      Wait! Get ₹2,000 Off the Python Full Stack + AI Agents Program
                     </h3>
                     <p className="text-muted-foreground text-sm">
                       Drop your details and we'll send you an exclusive early-bird discount + free program brochure.
