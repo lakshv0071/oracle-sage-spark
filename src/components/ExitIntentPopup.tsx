@@ -129,7 +129,7 @@ const ExitIntentPopup = () => {
                     We'll send you the program brochure and early-bird details within 24 hours.
                   </p>
                   <Button variant="hero" className="w-full" asChild>
-                    <a href="/python-full-stack#register">
+                    <a href="/python-fullstack-ai-agents#register">
                       View Full Program <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                   </Button>

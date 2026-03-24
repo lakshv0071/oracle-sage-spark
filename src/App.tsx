@@ -86,6 +86,7 @@ const App = () => (
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/python-full-stack" element={<PythonFullStack />} />
+            <Route path="/python-fullstack-ai-agents" element={<PythonFullStackAIAgents />} />
             <Route path="/marketing-assets" element={<MarketingAssets />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />

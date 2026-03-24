@@ -138,6 +138,12 @@ const courseCategories = [
         level: "Beginner",
         topics: ["HTML & CSS", "JavaScript Basics", "Responsive Design", "Git & GitHub", "Project Development"],
       },
+      {
+        name: "Python Full Stack Developer",
+        duration: "120–150 hours",
+        level: "Intermediate",
+        topics: ["Python & OOP", "Django & DRF", "React Frontend", "PostgreSQL", "Docker & Deployment"],
+      },
     ],
   },
   {

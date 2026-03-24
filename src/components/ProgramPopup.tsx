@@ -22,7 +22,7 @@ const ProgramPopup = () => {
 
   const handleExplore = () => {
     handleDismiss();
-    navigate("/python-full-stack");
+    navigate("/python-fullstack-ai-agents");
   };
 
   return (

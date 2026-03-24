@@ -83,12 +83,12 @@ const PythonFullStackWidget = () => {
                 {/* Buttons */}
                 <div className="space-y-3">
                   <Button variant="hero" size="lg" className="w-full" asChild>
-                    <a href="/python-full-stack#register">
+                    <a href="/python-fullstack-ai-agents#register">
                       Register Now <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" className="w-full" asChild>
-                    <a href="/python-full-stack">View Full Program</a>
+                    <a href="/python-fullstack-ai-agents">View Full Program</a>
                   </Button>
                 </div>
               </div>
