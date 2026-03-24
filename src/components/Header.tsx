@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Services", href: "/services" },
   { label: "Courses", href: "/courses" },
-  { label: "Python Full Stack", href: "/python-full-stack", highlight: true },
+  { label: "Full Stack + AI Agents", href: "/python-fullstack-ai-agents", highlight: true },
   { label: "Solutions", href: "/solutions" },
   { label: "Industries", href: "/industries" },
   { label: "Blog & Insights", href: "/blog" },

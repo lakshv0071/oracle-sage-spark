@@ -26,8 +26,8 @@ const ExitIntentPopup = () => {
   useEffect(() => {
     // Don't show if already dismissed this session or lead already captured
     if (sessionStorage.getItem(DISMISSED_KEY) || localStorage.getItem(LEAD_CAPTURED_KEY)) return;
-    // Don't show on the python-full-stack page (they're already there)
-    if (window.location.pathname === "/python-full-stack") return;
+    // Don't show on the course pages (they're already there)
+    if (window.location.pathname === "/python-full-stack" || window.location.pathname === "/python-fullstack-ai-agents") return;
 
     let timeout: ReturnType<typeof setTimeout>;
 
@@ -129,7 +129,7 @@ const ExitIntentPopup = () => {
                     We'll send you the program brochure and early-bird details within 24 hours.
                   </p>
                   <Button variant="hero" className="w-full" asChild>
-                    <a href="/python-full-stack#register">
+                    <a href="/python-fullstack-ai-agents#register">
                       View Full Program <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                   </Button>
@@ -141,7 +141,7 @@ const ExitIntentPopup = () => {
                       <Clock className="w-3.5 h-3.5" /> Limited Time Offer
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
-                      Wait! Get ₹2,000 Off the Python Full Stack Program
+                      Wait! Get ₹2,000 Off the Python Full Stack + AI Agents Program
                     </h3>
                     <p className="text-muted-foreground text-sm">
                       Drop your details and we'll send you an exclusive early-bird discount + free program brochure.

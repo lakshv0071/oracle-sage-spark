@@ -16,7 +16,7 @@ const PythonFullStackWidget = () => {
         title="Python Full Stack Program"
       >
         <span className="text-xs font-bold tracking-wide flex items-center gap-1">
-          🐍 Python Full Stack
+          🤖 Full Stack + AI
           <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
         </span>
       </button>
@@ -43,7 +43,7 @@ const PythonFullStackWidget = () => {
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg font-bold text-foreground">Python Full Stack Developer</h3>
+                  <h3 className="text-lg font-bold text-foreground">Python Full Stack + AI Agents</h3>
                   <button onClick={() => setPanelOpen(false)} className="p-1 rounded-md hover:bg-secondary text-muted-foreground">
                     <X className="w-5 h-5" />
                   </button>
@@ -51,9 +51,9 @@ const PythonFullStackWidget = () => {
 
                 <div className="space-y-3 mb-6">
                   {[
-                    "4 Months | 120–150 Hours",
+                    "10–14 Weeks | AI Agents Included",
+                    "FastAPI + React + LangChain",
                     "Mock Interviews + Job Assistance",
-                    "AI-First Learning Approach",
                     "Batch Starting Soon 🔥",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-2 text-sm text-foreground">
@@ -75,20 +75,20 @@ const PythonFullStackWidget = () => {
 
                 {/* Price */}
                 <div className="text-center mb-6 p-4 rounded-xl bg-secondary/50 border border-border/50">
-                  <div className="text-sm text-muted-foreground line-through">₹29,000</div>
-                  <div className="text-3xl font-bold text-foreground">₹22,000</div>
-                  <div className="text-xs text-accent font-semibold">Save ₹7,000 — Limited Time</div>
+                  <div className="text-sm text-muted-foreground line-through">₹34,000</div>
+                  <div className="text-3xl font-bold text-foreground">₹25,000</div>
+                  <div className="text-xs text-accent font-semibold">Save ₹9,000 — Limited Time</div>
                 </div>
 
                 {/* Buttons */}
                 <div className="space-y-3">
                   <Button variant="hero" size="lg" className="w-full" asChild>
-                    <a href="/python-full-stack#register">
+                    <a href="/python-fullstack-ai-agents#register">
                       Register Now <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" className="w-full" asChild>
-                    <a href="/python-full-stack">View Full Program</a>
+                    <a href="/python-fullstack-ai-agents">View Full Program</a>
                   </Button>
                 </div>
               </div>
