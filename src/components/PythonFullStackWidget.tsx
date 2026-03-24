@@ -51,9 +51,9 @@ const PythonFullStackWidget = () => {
 
                 <div className="space-y-3 mb-6">
                   {[
-                    "4 Months | 120–150 Hours",
+                    "10–14 Weeks | AI Agents Included",
+                    "FastAPI + React + LangChain",
                     "Mock Interviews + Job Assistance",
-                    "AI-First Learning Approach",
                     "Batch Starting Soon 🔥",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-2 text-sm text-foreground">
