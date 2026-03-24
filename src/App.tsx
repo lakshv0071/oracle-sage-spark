@@ -52,7 +52,7 @@ const GA4RouteTracker = () => {
 
 const FloatingWidget = () => {
   const location = useLocation();
-  if (location.pathname === "/python-full-stack") return null;
+  if (location.pathname === "/python-full-stack" || location.pathname === "/python-fullstack-ai-agents") return null;
   return <PythonFullStackWidget />;
 };
 
