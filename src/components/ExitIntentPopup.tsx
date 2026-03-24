@@ -26,8 +26,8 @@ const ExitIntentPopup = () => {
   useEffect(() => {
     // Don't show if already dismissed this session or lead already captured
     if (sessionStorage.getItem(DISMISSED_KEY) || localStorage.getItem(LEAD_CAPTURED_KEY)) return;
-    // Don't show on the python-full-stack page (they're already there)
-    if (window.location.pathname === "/python-full-stack") return;
+    // Don't show on the course pages (they're already there)
+    if (window.location.pathname === "/python-full-stack" || window.location.pathname === "/python-fullstack-ai-agents") return;
 
     let timeout: ReturnType<typeof setTimeout>;
 
