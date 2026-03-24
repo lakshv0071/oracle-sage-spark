@@ -16,7 +16,7 @@ const PythonFullStackWidget = () => {
         title="Python Full Stack Program"
       >
         <span className="text-xs font-bold tracking-wide flex items-center gap-1">
-          🐍 Python Full Stack
+          🤖 Full Stack + AI
           <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
         </span>
       </button>
