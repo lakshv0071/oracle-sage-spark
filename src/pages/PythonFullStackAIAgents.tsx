@@ -530,9 +530,8 @@ const PythonFullStackAIAgents = () => {
                 </div>
                 <CardContent className="p-6">
                   <div className="text-center mb-6">
-                    <div className="text-sm text-muted-foreground line-through">₹34,000</div>
-                    <span className="text-5xl font-bold text-foreground">₹25,000</span>
-                    <div className="text-sm text-accent font-semibold mt-1">Save ₹9,000 — Limited Time</div>
+                    <span className="text-5xl font-bold text-foreground">₹22,000</span>
+                    <p className="text-sm text-muted-foreground mt-1">All inclusive</p>
                   </div>
                   <ul className="space-y-3 mb-6">
                     {["Full Stack + AI Curriculum", "AI Agents with LangChain", "Mock Interviews (Tech + HR)", "Job Assistance & Referrals", "Communication Skills Workshop", "Live Mentorship & Capstone"].map((item) => (
