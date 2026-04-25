@@ -471,7 +471,7 @@ const PythonFullStackAIAgents = () => {
           <div className="container">
             <motion.div className="text-center mb-12 p-8 rounded-2xl bg-accent/10 border border-accent/30" {...fadeInUp}>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">🔥 Limited Seats Available — Next Batch Starting Soon</h2>
-              <CountdownTimer targetDate="2026-05-01T00:00:00+05:30" />
+              <CountdownTimer targetDate="2026-05-11T00:00:00+05:30" />
             </motion.div>
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
