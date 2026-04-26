@@ -86,8 +86,10 @@ const PythonFullStack = () => {
     email: "",
     phone: "",
     whatsapp: "",
+    employmentStatus: "",
     college: "",
     yearOfStudy: "",
+    yearOfGraduation: "",
     heardFrom: "",
     consent: false,
   });
@@ -117,8 +119,10 @@ const PythonFullStack = () => {
       email: form.email,
       phone: fullPhone,
       whatsapp_number: fullWhatsapp,
-      college_name: form.college,
-      year_of_study: form.yearOfStudy,
+      employment_status: form.employmentStatus,
+      college_name: (form.employmentStatus === "Student" || form.employmentStatus === "Fresher") ? form.college : "",
+      year_of_study: form.employmentStatus === "Student" ? form.yearOfStudy : "",
+      year_of_graduation: form.employmentStatus === "Fresher" ? form.yearOfGraduation : "",
       heard_from: form.heardFrom,
       consent: form.consent,
     };
@@ -174,8 +178,8 @@ const PythonFullStack = () => {
           name: form.fullName,
           email: form.email,
           phone: fullPhone,
-          company: form.college,
-          message: `WhatsApp: ${fullWhatsapp}\nYear of Study: ${form.yearOfStudy}\nHeard From: ${form.heardFrom}`,
+          company: form.college || "N/A",
+          message: `Employment Status: ${form.employmentStatus}\nWhatsApp: ${fullWhatsapp}\n${form.employmentStatus === "Student" ? `Year of Study: ${form.yearOfStudy}` : form.employmentStatus === "Fresher" ? `Year of Graduation: ${form.yearOfGraduation}` : ""}\nHeard From: ${form.heardFrom}`,
         }).catch(emailErr => {
           console.warn("⚠️ Admin email failed (registration still saved):", emailErr);
         });
@@ -707,20 +711,51 @@ const PythonFullStack = () => {
                       </div>
                     )}
                     <div>
-                      <Label htmlFor="college">College Name *</Label>
-                      <Input id="college" required maxLength={200} value={form.college} onChange={(e) => setForm({ ...form, college: e.target.value })} placeholder="Your college name" />
-                    </div>
-                    <div>
-                      <Label>Year of Study *</Label>
-                      <Select required onValueChange={(v) => setForm({ ...form, yearOfStudy: v })}>
-                        <SelectTrigger><SelectValue placeholder="Select year" /></SelectTrigger>
+                      <Label>Employment Status *</Label>
+                      <Select required onValueChange={(v) => setForm({ ...form, employmentStatus: v })}>
+                        <SelectTrigger><SelectValue placeholder="Are you a student or professional?" /></SelectTrigger>
                         <SelectContent>
-                          {["1st Year", "2nd Year", "3rd Year", "4th Year", "Graduated"].map((y) => (
-                            <SelectItem key={y} value={y}>{y}</SelectItem>
+                          {["Student", "Fresher", "Working Professional"].map((s) => (
+                            <SelectItem key={s} value={s}>{s}</SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
                     </div>
+
+                    {(form.employmentStatus === "Student" || form.employmentStatus === "Fresher") && (
+                      <div>
+                        <Label htmlFor="college">College Name *</Label>
+                        <Input id="college" required maxLength={200} value={form.college} onChange={(e) => setForm({ ...form, college: e.target.value })} placeholder="Your college name" />
+                      </div>
+                    )}
+
+                    {form.employmentStatus === "Student" && (
+                      <div>
+                        <Label>Year of Study *</Label>
+                        <Select required onValueChange={(v) => setForm({ ...form, yearOfStudy: v })}>
+                          <SelectTrigger><SelectValue placeholder="Select year" /></SelectTrigger>
+                          <SelectContent>
+                            {["1st Year", "2nd Year", "3rd Year", "4th Year"].map((y) => (
+                              <SelectItem key={y} value={y}>{y}</SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    )}
+
+                    {form.employmentStatus === "Fresher" && (
+                      <div>
+                        <Label>Year of Graduation *</Label>
+                        <Select required onValueChange={(v) => setForm({ ...form, yearOfGraduation: v })}>
+                          <SelectTrigger><SelectValue placeholder="Select graduation year" /></SelectTrigger>
+                          <SelectContent>
+                            {["2021", "2022", "2023", "2024", "2025"].map((y) => (
+                              <SelectItem key={y} value={y}>{y}</SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    )}
                     <div>
                       <Label>How did you hear about us?</Label>
                       <Select onValueChange={(v) => setForm({ ...form, heardFrom: v })}>
