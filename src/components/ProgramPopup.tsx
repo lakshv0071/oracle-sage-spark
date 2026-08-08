@@ -57,7 +57,7 @@ const ProgramPopup = () => {
               Master Full Stack + AI Agents
             </h2>
             <p className="text-muted-foreground mb-6">
-              <span className="text-primary font-semibold">Python Full Stack + AI Agents Program</span> — Batch Starting Soon!
+              <span className="text-primary font-semibold">Build AI Agents with Python Program</span> — Batch Starting Soon!
             </p>
             <Button variant="hero" size="lg" className="w-full mb-3" onClick={handleExplore}>
               Explore Program →
