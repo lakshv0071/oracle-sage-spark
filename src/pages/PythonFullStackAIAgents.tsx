@@ -155,7 +155,7 @@ const PythonFullStackAIAgents = () => {
         setLoading(false);
 
         sendInquiryEmail({
-          type: "Python Full Stack + AI Agents Program Registration",
+          type: "Build AI Agents with Python Program Registration",
           name: form.fullName,
           email: form.email,
           phone: fullPhone,
@@ -172,7 +172,7 @@ const PythonFullStackAIAgents = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: "Python Full Stack + AI Agents Program",
+    name: "Build AI Agents with Python Program",
     description: "Master Python Full Stack Development with AI Agents in 10–14 weeks. Learn Python, FastAPI, Django, React, OpenAI APIs, LangChain. Built for B.Tech students.",
     provider: {
       "@type": "Organization",
@@ -281,7 +281,7 @@ const PythonFullStackAIAgents = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Python Full Stack + AI Agents Program | Paramanu Consulting"
+        title="Build AI Agents with Python Program | Paramanu Consulting"
         description="Master Python Full Stack Development with AI Agents in 10–14 weeks. FastAPI, Django, React, OpenAI APIs, LangChain. Job assistance included. Built for B.Tech students."
         keywords="Python AI agents course, Python full stack AI course India, LangChain course, FastAPI course, Python bootcamp with AI, full stack developer program with AI, B.Tech Python training"
         url="https://www.paramanuconsulting.com/python-fullstack-ai-agents"
@@ -299,7 +299,7 @@ const PythonFullStackAIAgents = () => {
                 <StarRating rating={4.5} />
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                <span className="text-gradient-primary">Python Full Stack + AI Agents</span> — Build the Future
+                <span className="text-gradient-primary">Build AI Agents with Python</span> — Build the Future
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
                 Go beyond coding — learn to <strong className="text-foreground">build AI-powered apps with agents, tools & memory</strong>. Python → FastAPI → React → OpenAI → LangChain. Built for B.Tech students.
@@ -528,7 +528,7 @@ const PythonFullStackAIAgents = () => {
                   </div>
                 </div>
                 <div className="bg-secondary p-6 text-center border-b border-accent/20">
-                  <h2 className="text-2xl font-bold text-foreground">Python Full Stack + AI Agents</h2>
+                  <h2 className="text-2xl font-bold text-foreground">Build AI Agents with Python</h2>
                   <p className="text-muted-foreground text-sm">10–14 Week Bootcamp</p>
                   <StarRating rating={4.5} />
                 </div>
@@ -581,7 +581,7 @@ const PythonFullStackAIAgents = () => {
                   </div>
                   <Button variant="outline" asChild>
                     <a
-                      href={`https://wa.me/?text=${encodeURIComponent("I just registered for Python Full Stack + AI Agents Program at Paramanu Consulting! Check it out: https://www.paramanuconsulting.com/python-fullstack-ai-agents")}`}
+                      href={`https://wa.me/?text=${encodeURIComponent("I just registered for Build AI Agents with Python Program at Paramanu Consulting! Check it out: https://www.paramanuconsulting.com/python-fullstack-ai-agents")}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -591,7 +591,7 @@ const PythonFullStackAIAgents = () => {
                 </div>
               ) : (
                 <>
-                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-2">Register for Python Full Stack + AI Agents</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-2">Register for Build AI Agents with Python</h2>
                   <p className="text-center text-muted-foreground mb-8">🚀 Batch starting soon — limited seats available</p>
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div>
