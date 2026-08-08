@@ -13,10 +13,10 @@ const PythonFullStackWidget = () => {
         onClick={() => setPanelOpen(true)}
         className="fixed right-0 top-1/2 -translate-y-1/2 z-40 hidden md:flex items-center justify-center bg-accent text-accent-foreground writing-vertical-lr px-2 py-4 rounded-l-lg shadow-lg hover:px-3 transition-all duration-300 group"
         style={{ writingMode: "vertical-lr" }}
-        title="Python Full Stack Program"
+        title="Build AI Agents with Python"
       >
         <span className="text-xs font-bold tracking-wide flex items-center gap-1">
-          🤖 Full Stack + AI
+          🤖 Build AI Agents with Python
           <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
         </span>
       </button>
